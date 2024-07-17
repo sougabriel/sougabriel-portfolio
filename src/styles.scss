@@ -1,1 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+    height: 100svh;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+main {
+    min-height: 85svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 80svw;
+    @media (max-width: 1366px) {
+        & {
+            max-width: 85svw;
+        }
+    }
+    @media (max-width: 800px) {
+        & {
+            max-width: 90svw;
+        }
+    }
+    @media (max-width: 420px) {
+        & {
+            max-width: 95svw;
+        }
+    }
+}
+
+.title {
+    text-align: center;
+}
+
+.keyword {
+    display: inline;
+    font-size: small;
+    opacity: 0.8;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #666;
+}
