@@ -1,0 +1,13 @@
+.toolbar-licenses {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    a {
+        cursor: pointer;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
