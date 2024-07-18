@@ -1,0 +1,21 @@
+@use '@angular/material' as mat;
+
+@use "./shared/navbar/navbar-theme" as nav;
+@use "./shared/cookie-popup/cookie-popup-theme" as cookie;
+@use "./pages/not-found/not-found-theme" as notFound;
+@use "./pages/projects/projects-list/projects-list-theme" as projectsList;
+
+@mixin theme($theme) {
+    html {
+        background: mat.get-theme-color($theme, primary);
+    }
+
+    body {
+        color: mat.get-theme-color($theme, on-surface);
+    }
+
+    @include nav.theme($theme);
+    @include cookie.theme($theme);
+    @include projectsList.theme($theme);
+    @include notFound.theme($theme);
+}
