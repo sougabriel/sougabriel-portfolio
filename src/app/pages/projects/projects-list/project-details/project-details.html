@@ -1,0 +1,42 @@
+<div class="title">
+    <h2 mat-dialog-title>{{ project.name }}</h2>
+</div>
+<mat-dialog-content>
+    @for (keyword of project.keywords; track keyword) {
+    <span class="keyword">{{ keyword }}; </span>
+    }
+
+    <div class="description" [innerHTML]="project.description"></div>
+
+    @if (!project.skills?.includes('')) {
+    <div id="skills">
+        Skills Learned:
+        @for (skill of project.skills; track skill) {
+        {{skill}};
+        }
+    </div>
+    }
+    @if (!project.contributors?.includes('')) {
+    <div id="skills">
+        Contributors:
+        @for (contributor of project.contributors; track contributor) {
+        {{contributor}};
+        }
+    </div>
+    }
+    <div class="links">
+        @if (project.viewUrl?.startsWith('http')) {
+        <a mat-raised-button [href]="project.viewUrl" target="_blank"
+            matTooltip="Project implementation"><mat-icon>preview</mat-icon>View</a>
+        } @else {
+        <a mat-raised-button [routerLink]="project.viewUrl" [disabled]="isDisable(project.viewUrl!)"
+            (click)="dialogRef.close()"><mat-icon>preview</mat-icon>View</a>
+        }
+        <a mat-raised-button [href]="project.sourceCodeUrl" target="_blank"
+            [disabled]="isDisable(project.sourceCodeUrl!)"
+            matTooltip="Project source-code"><mat-icon>code</mat-icon>Repository</a>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close cdkFocusInitial>Close</button>
+</mat-dialog-actions>
