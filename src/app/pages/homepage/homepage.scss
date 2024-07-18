@@ -1,0 +1,114 @@
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#profile {
+	border-radius: 50%;
+	box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+section, .avatar {
+    display: flex;
+    align-items: center;
+    p {
+        max-width: 426px;
+        text-align: justify;
+    }
+}
+
+h3, h4 {
+    max-width: 426px;
+}
+
+h4 {
+    font-size: large;
+}
+
+.status {
+    position: relative;
+    margin-left: -10% !important;
+    margin-bottom: -40%;
+    font-size: xx-large;
+}
+
+
+#name {
+    * {
+        display: inline;
+        margin-right: 20px;
+    }
+}
+
+#curriculum {
+    @include flex;
+    padding: 10px;
+}
+
+.sections {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1200px) {
+	section {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 414px) {
+    .avatar img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+#curriculum {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+
+    a {
+        margin-right: 10px;
+    }
+}
+
+#socials {
+    @include flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.floating {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }
+}
+
+#resume {
+    @media (max-width: 370px) {
+        & {
+            max-width: 320px;
+        }
+
+        p {
+            font: 100 0.8em / 1rem !important;
+            width: 300px;
+        }
+    }
+}
