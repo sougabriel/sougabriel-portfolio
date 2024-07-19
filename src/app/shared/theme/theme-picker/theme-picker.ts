@@ -43,11 +43,15 @@ export class ThemePicker implements OnInit, OnDestroy {
         if (themeName) {
             this.selectTheme(themeName);
         } else {
-            this.themes().find((themes) => {
-                if (themes.isDefault === true) {
-                    this.selectTheme(themes.name);
-                }
-            });
+            try {
+                this.selectTheme(this.themes().at(0)!.name);
+            } catch {
+                this.themes().find((theme) => {
+                    if (theme.name !== null) {
+                        this.selectTheme(theme.name);
+                    }
+                })
+            }
         }
         this._queryParamSubscription = this._activatedRoute.queryParamMap
             .pipe(map((params: ParamMap) => params.get('theme')))
@@ -64,17 +68,10 @@ export class ThemePicker implements OnInit, OnDestroy {
 
     protected selectTheme(themeName: string) {
         const theme =
-            this.themes().find(
-                (currentTheme) => currentTheme.name === themeName
-            ) || this.themes().find((currentTheme) => currentTheme.isDefault)!;
+            this.themes().find((currentTheme) => currentTheme.name === themeName)!;
 
         this.currentTheme = theme;
-
-        if (theme.isDefault) {
-            this.styleManager.removeStyle('theme');
-        } else {
-            this.styleManager.setStyle('theme', `${theme.name}.css`);
-        }
+        this.styleManager.setStyle('theme', `${theme.name}.css`);
 
         if (this.currentTheme) {
             this.liveAnnouncer.announce(
