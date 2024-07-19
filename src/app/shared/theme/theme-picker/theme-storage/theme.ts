@@ -3,5 +3,4 @@ export interface Theme {
     displayName?: string;
     color: string;
     background: string;
-    isDefault?: boolean;
 }
