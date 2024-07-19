@@ -51,8 +51,7 @@ export class NavbarComponent {
             color: '#d7e3ff',
             displayName: 'Azure & Blue',
             name: 'azure-blue',
-            background: '#fdfbff',
-            isDefault: true
+            background: '#fdfbff'
         },
         {
             color: '#ffd9e1',
