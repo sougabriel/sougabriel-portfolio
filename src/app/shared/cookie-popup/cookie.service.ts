@@ -14,12 +14,10 @@ export class CookieService {
         // throw when using `localStorage` in private mode.
         try {
             this.hasAccepted = localStorage.getItem(this.STORAGE_KEY) === 'true';
-        } catch {
-            this.init();
-        }
+        } catch {}
     }
 
-    init(): void {
+    showMessage(): boolean {
         if (this.hasAccepted == false) {
             const message = this.messageBar.open(
                 'This site does not uses cookies! Have a good time browsing.',
@@ -28,10 +26,10 @@ export class CookieService {
             message.onAction().subscribe(() => {
                 this.accept();
             });
+            return true;
         }
+        return false;
     }
-
-
 
     /** Accepts the cookie disclaimer. */
     protected accept() {
