@@ -10,9 +10,9 @@ import {
 import { StyleManager } from '../style-manager/style-manager.service';
 import { Theme, ThemeStorage } from './theme-storage/index';
 import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIcon } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatTooltip } from '@angular/material/tooltip';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -25,7 +25,7 @@ import { LiveAnnouncer } from '@angular/cdk/a11y';
     changeDetection: ChangeDetectionStrategy.OnPush,
     encapsulation: ViewEncapsulation.None,
     standalone: true,
-    imports: [MatButtonModule, MatTooltipModule, MatMenuModule, MatIconModule],
+    imports: [MatButtonModule, MatTooltip, MatMenuModule, MatIcon],
 })
 export class ThemePicker implements OnInit, OnDestroy {
     protected readonly styleManager = inject(StyleManager);
@@ -36,7 +36,23 @@ export class ThemePicker implements OnInit, OnDestroy {
     protected _queryParamSubscription = Subscription.EMPTY;
     protected currentTheme!: Theme;
 
+    /**
+     * List of themes to be displayed on menu. The name attribute must be equals
+     * to the name of output theme that you generate on root of project.
+     *
+     * The first element in the list is the default value.
+     */
     themes = input.required<Theme[]>();
+
+    /**
+     * Change theme picker display icon with Material Symbols & Icons icon_name.
+     */
+    pickerIcon = input<string>('palette');
+
+    /**
+     * Change tooltip text to be displayed.
+     */
+    tooltipText = input<string>('Select a theme for the page');
 
     ngOnInit() {
         const themeName = this._themeStorage.getStoredThemeName();
@@ -50,7 +66,7 @@ export class ThemePicker implements OnInit, OnDestroy {
                     if (theme.name !== null) {
                         this.selectTheme(theme.name);
                     }
-                })
+                });
             }
         }
         this._queryParamSubscription = this._activatedRoute.queryParamMap
@@ -67,8 +83,9 @@ export class ThemePicker implements OnInit, OnDestroy {
     }
 
     protected selectTheme(themeName: string) {
-        const theme =
-            this.themes().find((currentTheme) => currentTheme.name === themeName)!;
+        const theme = this.themes().find(
+            (currentTheme) => currentTheme.name === themeName
+        )!;
 
         this.currentTheme = theme;
         this.styleManager.setStyle('theme', `${theme.name}.css`);

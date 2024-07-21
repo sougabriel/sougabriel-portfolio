@@ -1,6 +1,6 @@
 <button mat-icon-button class="theme-picker-trigger" [mat-menu-trigger-for]="themeMenu" aria-label="Select a theme"
-    matTooltip="Select a theme for the page">
-    <mat-icon>palette</mat-icon>
+    [matTooltip]="tooltipText()">
+    <mat-icon>{{ pickerIcon() }}</mat-icon>
 </button>
 
 <mat-menu #themeMenu="matMenu" xPosition="before" class="theme-picker-menu">
