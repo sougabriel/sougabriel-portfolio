@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, inject } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatDialogActions, MatDialogClose, MatDialogContent, MatDialogRef, MatDialogTitle, MAT_DIALOG_DATA } from "@angular/material/dialog";
 import { Project } from "../../../../api";
-import { MatIconModule } from "@angular/material/icon";
+import { MatIcon } from "@angular/material/icon";
 import { MatTooltip } from "@angular/material/tooltip";
 import { RouterLink } from "@angular/router";
 
@@ -16,7 +16,7 @@ import { RouterLink } from "@angular/router";
         MatDialogClose,
         MatDialogTitle,
         MatDialogContent,
-        MatIconModule,
+        MatIcon,
         MatTooltip,
         RouterLink,
     ],

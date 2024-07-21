@@ -1,27 +1,6 @@
 <h2 class="title">Projects</h2>
 <section>
     @for (project of (projects$ | async); track project) {
-    <mat-card appearance="outlined">
-        <mat-card-header>
-            <mat-card-title>{{ project.name }}</mat-card-title>
-            @for (keyword of project.keywords; track keyword) {
-            <mat-card-subtitle class="keyword">{{ keyword }}; </mat-card-subtitle>
-            }
-        </mat-card-header>
-        @defer (when project.imageUrl; prefetch on idle) {
-            <img mat-card-image [ngSrc]="project.imageUrl" height="240" width="426" priority />
-        } @placeholder {
-            <p>...loading picture...</p>
-        }
-        <mat-card-content>
-            <p>
-                {{ project.resume }}
-            </p>
-        </mat-card-content>
-        <mat-card-actions>
-            <button mat-raised-button (click)="openDialog('500ms', '200ms', project)"><mat-icon>info</mat-icon>More
-                Details</button>
-        </mat-card-actions>
-    </mat-card>
+        <project-card [project]="project"></project-card>
     }
 </section>
