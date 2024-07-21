@@ -7,22 +7,25 @@
 
 
 #profile {
-	border-radius: 50%;
-	box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
     margin-top: 20px;
     margin-bottom: 60px;
 }
 
-section, .avatar {
+section,
+.avatar {
     display: flex;
     align-items: center;
+
     p {
         max-width: 426px;
         text-align: justify;
     }
 }
 
-h3, h4 {
+h3,
+h4 {
     max-width: 426px;
 }
 
@@ -47,7 +50,7 @@ h4 {
 
 #curriculum {
     @include flex;
-    padding: 10px;
+    gap: 10px;
 }
 
 .sections {
@@ -57,9 +60,9 @@ h4 {
 }
 
 @media (max-width: 1200px) {
-	section {
-		flex-direction: column;
-	}
+    section {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 414px) {
@@ -83,6 +86,7 @@ h4 {
     @include flex;
     flex-direction: column;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 .floating {
@@ -95,9 +99,17 @@ h4 {
 }
 
 @keyframes floating {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 15px); }
-    100%   { transform: translate(0, -0px); }
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        transform: translate(0, -0px);
+    }
 }
 
 #resume {
@@ -107,8 +119,12 @@ h4 {
         }
 
         p {
-            font: 100 0.8em / 1rem !important;
             width: 300px;
+        }
+
+        #profile {
+            width: 280px;
+            height: 280px;
         }
     }
 }

@@ -19,7 +19,7 @@ import { RouterLink } from '@angular/router';
         Social,
         AsyncPipe,
         Social,
-        RouterLink,
+        RouterLink
     ],
     templateUrl: './homepage.html',
     styleUrl: './homepage.scss',
