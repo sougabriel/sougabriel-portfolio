@@ -19,6 +19,10 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:application",
                     "options": {
+                        "externalDependencies": [
+                            "fonts/material-icons.woff2",
+                            "images/background.svg"
+                        ],
                         "outputPath": "dist/sougabriel-portfolio",
                         "index": "src/index.html",
                         "browser": "src/main.ts",
