@@ -5,12 +5,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatListItem, MatNavList } from '@angular/material/list';
 import { MatIcon } from '@angular/material/icon';
-import { Theme, ThemePicker } from '../theme';
 import { MatTooltip } from '@angular/material/tooltip';
 import { GithubIcon, LinkedInIcon } from '../social/icons';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { FooterComponent } from '../../partials/footer/footer.component';
 import { BreakpointService } from '../services';
+import { Theme, ThemePicker } from 'ngx-theme-picker';
 
 @Component({
     selector: 'navbar',
