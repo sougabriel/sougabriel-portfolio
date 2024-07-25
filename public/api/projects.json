@@ -8,7 +8,7 @@
         "skills": ["Angular Routing", "Input, Output Events", "Forms Module", "HTTPClient", "RxJs", "Lazy Loading"],
         "sourceCodeUrl": "https://github.com/sougabriel/ifmaker-system",
         "viewUrl": "",
-        "imageUrl": "/images/projects/ifmaker-system.svg",
+        "imageUrl": "images/projects/ifmaker-system.svg",
         "contributors": [""]
     },
     {
@@ -20,7 +20,7 @@
         "skills": ["Clean Architecture", "NodeJs Server", "RESTful API"],
         "sourceCodeUrl": "https://github.com/sougabriel/ifmaker-api",
         "viewUrl": "",
-        "imageUrl": "/images/projects/ifmaker-api.svg",
+        "imageUrl": "images/projects/ifmaker-api.svg",
         "contributors": [""]
     },
     {
@@ -32,7 +32,7 @@
         "skills": ["Keyboard Events", "Interval Function", "Countdown"],
         "sourceCodeUrl": "https://github.com/sougabriel/spaceDagger-js",
         "viewUrl": "https://sougabriel.github.io/projects/spacedagger/index.html",
-        "imageUrl": "/images/projects/space-dagger.webp",
+        "imageUrl": "images/projects/space-dagger.webp",
         "contributors": [""]
     },
     {
@@ -44,7 +44,7 @@
         "skills": ["Arrays Methods", "Javascript", "Responsive Design"],
         "sourceCodeUrl": "https://github.com/sougabriel/simple-calculator-js",
         "viewUrl": "https://sougabriel.github.io/projects/simplecalc/index.html",
-        "imageUrl": "/images/projects/simple-calculator-js.webp",
+        "imageUrl": "images/projects/simple-calculator-js.webp",
         "contributors": [""]
     },
     {
@@ -56,7 +56,7 @@
         "skills": [""],
         "sourceCodeUrl": "https://github.com/sougabriel/BMI-CalculatorJs",
         "viewUrl": "https://sougabriel.github.io/projects/bmicalc/index.html",
-        "imageUrl": "/images/projects/bmi-calculator.webp",
+        "imageUrl": "images/projects/bmi-calculator.webp",
         "contributors": [""]
     },
     {
@@ -68,7 +68,7 @@
         "skills": ["PHP", "CSS"],
         "sourceCodeUrl": "https://github.com/sougabriel/index-phpserver",
         "viewUrl": "",
-        "imageUrl": "/images/projects/directory-php.webp",
+        "imageUrl": "images/projects/directory-php.webp",
         "contributors": [""]
     }
 ]

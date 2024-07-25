@@ -2,13 +2,13 @@
     {
         "type": "E-Mail",
         "url": "mailto:gabriel.dsouzapro@gmail.com",
-        "iconUrl": "/icons/social/mailbox.svg",
+        "iconUrl": "icons/social/mailbox.svg",
         "iconAlt": "mailbox icon"
     },
     {
         "type": "LinkedIn",
         "url": "https://www.linkedin.com/in/sougabriels/",
-        "iconUrl": "/icons/social/linkedin.svg",
+        "iconUrl": "icons/social/linkedin.svg",
         "iconAlt": "LinkedIn Logo"
     }
 ]
