@@ -66,9 +66,17 @@
                                 "input": "src/styles/custom-themes/rose-red.scss",
                                 "bundleName": "rose-red",
                                 "inject": false
-                            }
+                            },
+                            "node_modules/prismjs/themes/prism-okaidia.css"
                         ],
-                        "scripts": []
+                        "scripts": [
+                            "node_modules/prismjs/prism.js",
+                            "node_modules/prismjs/components/prism-typescript.min.js",
+                            "node_modules/prismjs/components/prism-sql.min.js",
+                            "node_modules/prismjs/components/prism-bash.min.js",
+                            "node_modules/prismjs/components/prism-scss.min.js",
+                            "node_modules/prismjs/components/prism-json.min.js"
+                        ]
                     },
                     "configurations": {
                         "production": {
