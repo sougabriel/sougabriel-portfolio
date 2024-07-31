@@ -9,7 +9,7 @@ import { MatTooltip } from '@angular/material/tooltip';
 import { GithubIcon, LinkedInIcon } from '../social/icons';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { FooterComponent } from '../../partials/footer/footer.component';
-import { BreakpointService } from '../services';
+import { BreakpointService } from '@shared/services';
 import { Theme, ThemePicker } from 'ngx-theme-picker';
 
 @Component({
@@ -36,7 +36,7 @@ import { Theme, ThemePicker } from 'ngx-theme-picker';
     ],
 })
 export class NavbarComponent {
-    protected readonly title = signal('Gabriel de Souza');
+    protected readonly title: string = 'Gabriel de Souza';
     protected readonly breakpointService = inject(BreakpointService);
     protected readonly isHandset$ = this.breakpointService.isHandset();
     protected drawer = viewChild<MatSidenav>('drawer');

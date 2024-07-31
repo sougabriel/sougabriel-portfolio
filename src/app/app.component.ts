@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CookiePopup } from './shared/cookie-popup/cookie-popup';
-import { NavbarComponent } from './shared/navbar/navbar.component';
+import { CookiePopup } from '@shared/cookie-popup/cookie-popup';
+import { NavbarComponent } from '@shared/navbar/navbar.component';
 
 @Component({
     selector: 'app-root',

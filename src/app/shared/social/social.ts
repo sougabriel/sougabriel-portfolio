@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
 import { AsyncPipe, NgOptimizedImage } from '@angular/common';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { ContactService } from '../../api';
+import { ContactService } from '@api/services';
 import { ClipboardModule } from '@angular/cdk/clipboard'
 
 @Component({
