@@ -3,7 +3,7 @@ export interface Project {
     name: string;
     keywords: string[];
     resume: string;
-    description: string;
+    documentUrl: string;
     skills?: string[];
     sourceCodeUrl?: string;
     viewUrl?: string;
