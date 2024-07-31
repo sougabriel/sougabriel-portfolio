@@ -1,5 +1,4 @@
 export interface Project {
-    id?: number;
     name: string;
     keywords: string[];
     resume: string;

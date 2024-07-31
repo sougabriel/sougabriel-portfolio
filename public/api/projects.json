@@ -1,18 +1,23 @@
 [
     {
-        "id": 1,
         "name": "IFMaker System",
         "keywords": ["Angular", "Typescript", "RxJs", "LESS"],
         "resume": "A system of material management and access control for Federal Institute Farroupilha maker laboratories",
         "documentUrl": "docs/projects/ifmaker-system.md",
-        "skills": ["Angular Routing", "Input, Output Events", "Forms Module", "HTTPClient", "RxJs", "Lazy Loading"],
+        "skills": [
+            "Angular Routing",
+            "Input, Output Events",
+            "Forms Module",
+            "HTTPClient",
+            "RxJs",
+            "Lazy Loading"
+        ],
         "sourceCodeUrl": "https://github.com/sougabriel/ifmaker-system",
         "viewUrl": "",
         "imageUrl": "images/projects/ifmaker-system.svg",
         "contributors": [""]
     },
     {
-        "id": 2,
         "name": "IFMaker API",
         "keywords": ["MySQL", "Javascript", "ExpressJS", "Sequelize"],
         "resume": "A RESTful Application Programming Interface (API) for Federal Institute Farroupilha maker laboratories system",
@@ -23,8 +28,61 @@
         "imageUrl": "images/projects/ifmaker-api.svg",
         "contributors": [""]
     },
+
     {
-        "id": 3,
+        "name": "Theme Picker Library",
+        "keywords": ["Angular", "Material Design", "RxJs", "Typescript"],
+        "resume": "An Angular library for manage styles dynamically and display a template menu with material design.",
+        "documentUrl": "docs/projects/npx-theme-picker.md",
+        "skills": [
+            "Angular Signals",
+            "Angular Library Development",
+            "Page Style Manager",
+            "Open Source"
+        ],
+        "sourceCodeUrl": "https://github.com/sougabriel/ngx-sougabriel-libs/tree/master/projects/ngx-theme-picker",
+        "viewUrl": "https://www.npmjs.com/package/ngx-theme-picker",
+        "imageUrl": "images/projects/theme-picker.gif",
+        "contributors": [""]
+    },
+    {
+        "name": "Cookie Popup Library",
+        "keywords": ["Angular", "Material Design", "RxJs", "Typescript"],
+        "resume": "An Angular library for easy display a cookie popup message or build a popup with a component.",
+        "documentUrl": "docs/projects/npx-cookie-popup.md",
+        "skills": [
+            "Angular Library Development",
+            "Open Source",
+            "LocalStorage"
+        ],
+        "sourceCodeUrl": "https://github.com/sougabriel/ngx-sougabriel-libs/tree/master/projects/ngx-cookie-popup",
+        "viewUrl": "https://www.npmjs.com/package/ngx-cookie-popup",
+        "imageUrl": "images/projects/cookie-popup.gif",
+        "contributors": [""]
+    },
+    {
+        "name": "Tour Virtual IFFar-SVS",
+        "keywords": ["A-Frame", "CSS", "Javascript", "Virtual Reality"],
+        "resume": "A web application made for people who want to know more about the Instituto Federal Farroupilha - São Vicente do Sul",
+        "documentUrl": "docs/projects/tour-virtual-iffar.md",
+        "skills": ["A-Frame", "CSS", "Javascript", "Team Colaboration", "Team Work"],
+        "sourceCodeUrl": "https://github.com/dhDSouza/tour-virtual-iffar",
+        "viewUrl": "",
+        "imageUrl": "images/projects/tour-virtual-iffar.webp",
+        "contributors": [""]
+    },
+    {
+        "name": "Simple Bookstore API",
+        "keywords": ["NestJs", "Prisma ORM", "PostgreSQL", "Typescript"],
+        "resume": "",
+        "documentUrl": "docs/projects/bookstore-api.md",
+        "skills": ["Asynchronous Programming", "CRUD", "HTTP Requests"],
+        "sourceCodeUrl": "",
+        "viewUrl": "",
+        "imageUrl": "images/projects/bookstore.webp",
+        "contributors": [""]
+    },
+    {
         "name": "SpaceDagger",
         "keywords": ["Javascript", "JQuery", "CSS", "Web Game"],
         "resume": "A simple pixelart rhythm game of spaceships made with Javascript and JQuery.",
@@ -36,7 +94,6 @@
         "contributors": [""]
     },
     {
-        "id": 4,
         "name": "Simple Calculator Js",
         "keywords": ["Javascript", "HTML", "CSS"],
         "resume": "A simple calculator made with pure Javascript and without eval function.",
@@ -48,7 +105,6 @@
         "contributors": [""]
     },
     {
-        "id": 5,
         "name": "BMI Calculator",
         "keywords": ["Javascript", "AngularJS", "Bootstrap"],
         "resume": "A simple page for calculate BMI using AngularJS and Bootstrap.",
@@ -60,7 +116,6 @@
         "contributors": [""]
     },
     {
-        "id": 6,
         "name": "Directory View PHP",
         "keywords": ["PHP", "CSS", "List Directories"],
         "resume": "This is a php index file to customize your user or php web server. This code will list all folders in your base server directory.",
@@ -69,42 +124,6 @@
         "sourceCodeUrl": "https://github.com/sougabriel/index-phpserver",
         "viewUrl": "",
         "imageUrl": "images/projects/directory-php.webp",
-        "contributors": [""]
-    },
-    {
-        "id": 7,
-        "name": "Theme Picker Library",
-        "keywords": ["Angular", "Material Design", "RxJs", "Typescript"],
-        "resume": "An Angular library for manage styles dynamically and display a template menu with material design.",
-        "documentUrl": "docs/projects/npx-theme-picker.md",
-        "skills": ["Angular Signals", "Angular Library Development", "Page Style Manager", "Open Source"],
-        "sourceCodeUrl": "https://github.com/sougabriel/ngx-sougabriel-libs/tree/master/projects/ngx-theme-picker",
-        "viewUrl": "https://www.npmjs.com/package/ngx-theme-picker",
-        "imageUrl": "images/projects/theme-picker.gif",
-        "contributors": [""]
-    },
-    {
-        "id": 8,
-        "name": "Cookie Popup Library",
-        "keywords": ["Angular", "Material Design", "RxJs", "Typescript"],
-        "resume": "An Angular library for easy display a cookie popup message or build a popup with a component.",
-        "documentUrl": "docs/projects/npx-cookie-popup.md",
-        "skills": ["Angular Library Development", "Open Source", "LocalStorage"],
-        "sourceCodeUrl": "https://github.com/sougabriel/ngx-sougabriel-libs/tree/master/projects/ngx-cookie-popup",
-        "viewUrl": "https://www.npmjs.com/package/ngx-cookie-popup",
-        "imageUrl": "images/projects/cookie-popup.gif",
-        "contributors": [""]
-    },
-    {
-        "id": 9,
-        "name": "Simple Bookstore API",
-        "keywords": ["NestJs", "Prisma ORM", "PostgreSQL", "Typescript"],
-        "resume": "",
-        "documentUrl": "docs/projects/bookstore-api.md",
-        "skills": ["Asynchronous Programming", "CRUD", "HTTP Requests"],
-        "sourceCodeUrl": "",
-        "viewUrl": "",
-        "imageUrl": "images/projects/bookstore.webp",
         "contributors": [""]
     }
 ]
