@@ -1,0 +1,12 @@
+:host {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    max-width: 90dvw;
+    overflow: auto;
+    @media (max-width: 414px) {
+        & {
+            width: 100%;
+        }
+    }
+}

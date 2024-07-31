@@ -12,8 +12,8 @@ main {
     min-height: 85svh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+    align-items: start;
+    margin: 20px auto;
     max-width: 80svw;
     @media (max-width: 1366px) {
         & {
@@ -23,11 +23,6 @@ main {
     @media (max-width: 800px) {
         & {
             max-width: 90svw;
-        }
-    }
-    @media (max-width: 420px) {
-        & {
-            max-width: 95svw;
         }
     }
 }

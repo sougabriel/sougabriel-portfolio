@@ -4,7 +4,9 @@
     align-items: center;
 }
 
-
+:host {
+    margin: auto 0;
+}
 
 #profile {
     border-radius: 50%;

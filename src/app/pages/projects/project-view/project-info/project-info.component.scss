@@ -1,0 +1,17 @@
+:host {
+    display: block;
+}
+
+#actions {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+#skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 20px;
+}
