@@ -2,34 +2,38 @@
     <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
         [mode]="(isHandset$ | async) ? 'push' : 'over'" [autoFocus]="false">
 
-        <mat-toolbar class="menu-toolbar">
-            <span>Menu</span>
-            <button type="button" aria-label="close side navigation" mat-icon-button matTooltipPosition="right"
-                matTooltip="Close Navigation" (click)="drawer.close()">
-                <mat-icon>close</mat-icon>
-            </button>
-        </mat-toolbar>
+        @defer (prefetch on idle) {
+            <mat-toolbar class="menu-toolbar">
+                <span>Menu</span>
+                <button type="button" aria-label="close side navigation" mat-icon-button matTooltipPosition="right"
+                    matTooltip="Close Navigation" (click)="drawer.close()">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-toolbar>
 
-        <mat-nav-list>
-            <a mat-list-item routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page"
-                (click)="drawer.close()">Home</a>
-            <a mat-list-item routerLink="/projects" routerLinkActive="active" ariaCurrentWhenActive="page"
-                (click)="drawer.close()">Projects</a>
-            <div class="social">
-                <a mat-button href="https://github.com/sougabriel" target="_blank">
-                    <div class="social-icon">
-                        <github-icon />
-                        <span>GitHub</span>
-                    </div>
-                </a>
-                <a mat-button href="https://www.linkedin.com/in/sougabriels/" target="_blank">
-                    <div class="social-icon">
-                        <linkedin-icon />
-                        <span>LinkedIn</span>
-                    </div>
-                </a>
-            </div>
-        </mat-nav-list>
+            <mat-nav-list>
+                <a mat-list-item routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page"
+                    (click)="drawer.close()">Home</a>
+                <a mat-list-item routerLink="/projects" routerLinkActive="active" ariaCurrentWhenActive="page"
+                    (click)="drawer.close()">Projects</a>
+                <div class="social">
+                    <a mat-button href="https://github.com/sougabriel" target="_blank">
+                        <div class="social-icon">
+                            <github-icon />
+                            <span>GitHub</span>
+                        </div>
+                    </a>
+                    <a mat-button href="https://www.linkedin.com/in/sougabriels/" target="_blank">
+                        <div class="social-icon">
+                            <linkedin-icon />
+                            <span>LinkedIn</span>
+                        </div>
+                    </a>
+                </div>
+            </mat-nav-list>
+        } @placeholder {
+            loading
+        }
 
     </mat-sidenav>
 
@@ -40,7 +44,7 @@
                 <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
                     <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
                 </button>
-                <span>{{ title() }}</span>
+                <span>{{ title }}</span>
             </div>
 
             <div class="nav-menu">
@@ -53,7 +57,7 @@
                 </nav>
                 }
                 <div class="options">
-                    <ngx-mat-theme-picker [themes]="themes" pickerIcon="format_color_fill" />
+                    <ngx-mat-theme-picker [themes]="themes" />
                 </div>
             </div>
 

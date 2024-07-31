@@ -1,3 +1,7 @@
-<mat-toolbar class="toolbar-licenses">
-    <button mat-button (click)="this.openLicense('400ms', '200ms')">Open Licenses</button>
-</mat-toolbar>
+@defer {
+    <mat-toolbar class="toolbar-licenses">
+        <button mat-button (click)="this.openLicense('400ms', '200ms')">Open Licenses</button>
+    </mat-toolbar>
+} @placeholder {
+    footer
+}
