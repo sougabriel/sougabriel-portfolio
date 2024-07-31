@@ -14,7 +14,7 @@
         ],
         "sourceCodeUrl": "https://github.com/sougabriel/ifmaker-system",
         "viewUrl": "",
-        "imageUrl": "images/projects/ifmaker-system.svg",
+        "imageUrl": "images/projects/ifmaker-system.webp",
         "contributors": [""]
     },
     {
@@ -25,7 +25,7 @@
         "skills": ["Clean Architecture", "NodeJs Server", "RESTful API"],
         "sourceCodeUrl": "https://github.com/sougabriel/ifmaker-api",
         "viewUrl": "",
-        "imageUrl": "images/projects/ifmaker-api.svg",
+        "imageUrl": "images/projects/ifmaker-api.webp",
         "contributors": [""]
     },
 
@@ -42,7 +42,7 @@
         ],
         "sourceCodeUrl": "https://github.com/sougabriel/ngx-sougabriel-libs/tree/master/projects/ngx-theme-picker",
         "viewUrl": "https://www.npmjs.com/package/ngx-theme-picker",
-        "imageUrl": "images/projects/theme-picker.gif",
+        "imageUrl": "images/projects/theme-picker.webp",
         "contributors": [""]
     },
     {
@@ -57,7 +57,7 @@
         ],
         "sourceCodeUrl": "https://github.com/sougabriel/ngx-sougabriel-libs/tree/master/projects/ngx-cookie-popup",
         "viewUrl": "https://www.npmjs.com/package/ngx-cookie-popup",
-        "imageUrl": "images/projects/cookie-popup.gif",
+        "imageUrl": "images/projects/cookie-popup.webp",
         "contributors": [""]
     },
     {
@@ -74,12 +74,12 @@
     {
         "name": "Simple Bookstore API",
         "keywords": ["NestJs", "Prisma ORM", "PostgreSQL", "Typescript"],
-        "resume": "",
+        "resume": "A RESTful API of a simple bookstore made with NestJs and Prisma.IO, using postgresql as database.",
         "documentUrl": "docs/projects/bookstore-api.md",
         "skills": ["Asynchronous Programming", "CRUD", "HTTP Requests"],
         "sourceCodeUrl": "",
         "viewUrl": "",
-        "imageUrl": "images/projects/bookstore.webp",
+        "imageUrl": "images/projects/bookstore-api.webp",
         "contributors": [""]
     },
     {
