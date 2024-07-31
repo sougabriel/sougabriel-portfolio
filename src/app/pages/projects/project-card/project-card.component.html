@@ -1,23 +1,33 @@
 <mat-card appearance="outlined">
+
     <mat-card-header>
         <mat-card-title>{{ project().name }}</mat-card-title>
         @for (keyword of project().keywords; track keyword) {
-            <mat-card-subtitle class="keyword">{{ keyword }}; </mat-card-subtitle>
+        <mat-card-subtitle class="keyword">{{ keyword }}; </mat-card-subtitle>
         }
     </mat-card-header>
+
     @defer (on viewport) {
         <img mat-card-image [ngSrc]="project().imageUrl" height="240" width="426" priority />
     } @placeholder {
         <p>...loading picture...</p>
     }
+
     <mat-card-content>
         <p>
             {{ project().resume }}
         </p>
     </mat-card-content>
+
     <mat-card-actions>
-        <button mat-raised-button (click)="openDialog('200ms', '200ms', project())">
-            <mat-icon>info</mat-icon>More Details
-        </button>
+        @if (project().viewUrl?.startsWith('http')) {
+            <a mat-button [href]="project().viewUrl" target="_blank"><mat-icon>preview</mat-icon>View Project</a>
+        }
+        <a [routerLink]="'/projects/details/' + project().name.replaceAll(' ', '')">
+            <button mat-button>
+                <mat-icon>info</mat-icon>More Details
+            </button>
+        </a>
     </mat-card-actions>
+
 </mat-card>
