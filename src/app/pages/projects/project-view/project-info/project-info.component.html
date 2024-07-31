@@ -1,0 +1,34 @@
+<div id="actions">
+    <a routerLink="/projects/list">
+        <button mat-button><mat-icon>arrow_left</mat-icon>Back</button>
+    </a>
+
+    <div id="links">
+        @if (project().viewUrl && project().viewUrl?.startsWith('http')) {
+        <a mat-raised-button [href]="project().viewUrl" target="_blank"
+            matTooltip="Project implementation"><mat-icon>preview</mat-icon>View Project</a>
+        }
+        <a mat-raised-button [href]="project().sourceCodeUrl" target="_blank"
+            matTooltip="Project source-code"><mat-icon>code</mat-icon>Repository</a>
+    </div>
+
+</div>
+
+@if (!project().skills?.includes('')) {
+<div id="skills">
+    @for (skill of project().skills; track skill) {
+        <mat-chip>{{skill}}</mat-chip>
+    }
+</div>
+}
+
+<ng-content />
+
+@if (!project().contributors?.includes('')) {
+<div id="skills">
+    Contributors:
+    @for (contributor of project().contributors; track contributor) {
+        {{contributor}};
+    }
+</div>
+}
