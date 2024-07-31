@@ -6,7 +6,10 @@
         "outDir": "./dist/out-tsc",
         "paths": {
             "baseUrl": ["./"],
-            "fonts": ["/fonts/material-icons.woff2"]
+            "@api/*": ["./src/app/api/*"],
+            "@shared/*": [
+                "./src/app/shared/*"
+            ],
         },
         "strict": true,
         "noImplicitOverride": true,
