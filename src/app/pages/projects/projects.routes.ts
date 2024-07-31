@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { Routes, UrlSegment } from '@angular/router';
 
 export const routes: Routes = [
     {
@@ -12,6 +12,13 @@ export const routes: Routes = [
                 loadComponent: () =>
                     import('./projects-list/projects-list').then(
                         (c) => c.ProjectsList
+                    ),
+            },
+            {
+                path: 'details/:project',
+                loadComponent: () =>
+                    import('./project-view/project-view.component').then(
+                        (c) => c.ProjectViewComponent
                     ),
             },
             {
