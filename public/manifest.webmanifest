@@ -1,7 +1,7 @@
 {
-  "name": "sougabriel-portfolio",
-  "short_name": "sougabriel-portfolio",
-  "theme_color": "#1976d2",
+  "name": "Gabriel de Souza - Portfolio",
+  "short_name": "Sou Gabriel Portfolio",
+  "theme_color": "#0003bd",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
