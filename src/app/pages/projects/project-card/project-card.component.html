@@ -7,7 +7,7 @@
         }
     </mat-card-header>
 
-    @defer (on viewport) {
+    @defer (on viewport; prefetch on idle) {
         <img mat-card-image [ngSrc]="project().imageUrl" height="240" width="426" priority />
     } @placeholder {
         <p>...loading picture...</p>
