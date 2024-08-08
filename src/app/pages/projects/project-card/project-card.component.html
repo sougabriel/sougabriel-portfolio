@@ -8,7 +8,7 @@
     </mat-card-header>
 
     @defer (on viewport; prefetch on idle) {
-        <img mat-card-image [ngSrc]="project().imageUrl" height="240" width="426" priority />
+        <img mat-card-image [ngSrc]="project().imageUrl" height="240" width="426" fetchpriority="high" loading="lazy" />
     } @placeholder {
         <p>...loading picture...</p>
     }
