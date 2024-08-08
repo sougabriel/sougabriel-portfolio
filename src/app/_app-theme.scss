@@ -1,7 +1,6 @@
 @use '@angular/material' as mat;
 
 @use "./shared/navbar/navbar-theme" as nav;
-@use "./shared/cookie-popup/cookie-popup-theme" as cookie;
 @use "./pages/not-found/not-found-theme" as notFound;
 @use "./pages/projects/projects-list/projects-list-theme" as projectsList;
 
@@ -15,7 +14,6 @@
     }
 
     @include nav.theme($theme);
-    @include cookie.theme($theme);
     @include projectsList.theme($theme);
     @include notFound.theme($theme);
 }
