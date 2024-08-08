@@ -26,11 +26,12 @@
                         "outputPath": "dist/sougabriel-portfolio",
                         "index": "src/index.html",
                         "browser": "src/main.ts",
-                        "polyfills": ["zone.js", "@angular/localize/init"],
+                        "polyfills": ["@angular/localize/init"],
                         "tsConfig": "tsconfig.app.json",
                         "inlineStyleLanguage": "scss",
+                        "aot": true,
                         "sourceMap": true,
-                        "optimization": false,
+                        "optimization": true,
                         "namedChunks": true,
                         "assets": [
                             {
@@ -92,11 +93,11 @@
                                     "maximumError": "10kB"
                                 }
                             ],
-
                             "optimization": true,
                             "outputHashing": "all",
                             "sourceMap": false,
                             "namedChunks": false,
+                            "aot": true,
                             "extractLicenses": true,
                             "serviceWorker": "ngsw-config.json"
                         },
@@ -127,8 +128,6 @@
                     "builder": "@angular-devkit/build-angular:karma",
                     "options": {
                         "polyfills": [
-                            "zone.js",
-                            "zone.js/testing",
                             "@angular/localize/init"
                         ],
                         "tsConfig": "tsconfig.spec.json",
