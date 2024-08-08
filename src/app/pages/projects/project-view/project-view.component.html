@@ -1,3 +1,7 @@
 <app-project-info [project]="selectedProject()">
-    <markdown [src]="doc()" />
+    @if (this.doc()) {
+        <markdown [src]="doc()" />
+    } @else {
+        loading content
+    }
 </app-project-info>
