@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, HostListener, inject, signal, viewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, inject, viewChild } from '@angular/core';
 import { AsyncPipe } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -39,7 +39,7 @@ export class NavbarComponent {
     protected readonly title: string = 'Gabriel de Souza';
     protected readonly breakpointService = inject(BreakpointService);
     protected readonly isHandset$ = this.breakpointService.isHandset();
-    protected drawer = viewChild<MatSidenav>('drawer');
+    protected readonly drawer = viewChild<MatSidenav>('drawer');
 
     @HostListener('window:keyup.escape')
     toggleNavBar() {
