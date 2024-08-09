@@ -18,6 +18,7 @@ import { NavbarComponent } from '@shared/navbar/navbar.component';
 export class AppComponent {
     protected readonly cookieService = inject(CookiePopup);
     constructor() {
+        console.clear();
         this.cookieService.showSimpleMessage(
             'This site does not uses cookies! Have a good time browsing.',
             'Okay'
