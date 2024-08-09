@@ -1,14 +1,14 @@
 <section id="resume">
+    @defer (when (developer$ | async)) {
     <div class="avatar">
         @defer {
-            <img id="profile" class="floating" [ngSrc]="(developer$ | async)?.profileImageUrl!" alt="Profile Image" height="380"
-                width="380" priority>
+        <img id="profile" class="floating" [ngSrc]="(developer$ | async)?.profileImageUrl!" alt="Profile Image"
+            height="380" width="380" priority>
         } @loading {
-            loading image
+        loading image
         }
-        <button class="status floating" mat-mini-fab [matTooltip]="(developer$ | async)?.status!"
-            matTooltipPosition="right">{{
-            (developer$ | async)?.statusEmoji }}</button>
+        <button class="status floating" mat-mini-fab [matTooltip]="(developer$ | async)!.status"
+            matTooltipPosition="right">{{ (developer$ | async)?.statusEmoji }}</button>
     </div>
 
     <div id="informations">
@@ -23,7 +23,7 @@
             <p class="keyword">
                 Top Skills:
                 @for (skill of (developer$ | async)?.topSkills; track skill) {
-                    <span>{{ skill }}; </span>
+                <span>{{ skill }}; </span>
                 }
             </p>
         </div>
@@ -48,5 +48,5 @@
         </div>
 
     </div>
-
+    }
 </section>
