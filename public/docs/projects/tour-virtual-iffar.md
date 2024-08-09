@@ -1,6 +1,8 @@
 # Tour Virtual IFFar - SVS
 
-This project is a web application that was made for people who want to know more about the Instituto Federal Farroupilha - São Vicente do Sul. It's a colaboration of 11 developers and designers.
+In this project I was responsible for code review and implementation of reactivity methods.
+
+This project is a web application that was made for people who want to know more about the Instituto Federal Farroupilha - São Vicente do Sul. It's a colaboration of 11 developers and designers. 
 
 ## Technologies
 
