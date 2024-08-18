@@ -1,0 +1,14 @@
+:host {
+  display: block;
+}
+
+p {
+    max-width: 426px;
+    text-align: justify;
+}
+
+@media (max-width: 370px) {
+    p {
+        width: 300px;
+    }
+}
