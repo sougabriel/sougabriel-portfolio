@@ -1,0 +1,7 @@
+<h4>{{ developer().headline }}</h4>
+<p class="keyword">
+    Top Skills:
+    @for (skill of developer().topSkills; track skill) {
+        <span>{{ skill }}; </span>
+    }
+</p>
