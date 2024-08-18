@@ -10,5 +10,11 @@
         "url": "https://www.linkedin.com/in/sougabriels/",
         "iconUrl": "icons/social/linkedin.svg",
         "iconAlt": "LinkedIn Logo"
+    },
+    {
+        "type": "Github",
+        "url": "https://github.com/sougabriel/",
+        "iconUrl": "icons/social/github.svg",
+        "iconAlt": "GitHub Logo"
     }
 ]
