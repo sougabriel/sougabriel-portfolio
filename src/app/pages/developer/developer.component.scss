@@ -1,0 +1,17 @@
+:host {
+    display: flex;
+    margin: auto 0;
+
+    @media (max-width: 1200px) {
+        & {
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 600px) {
+        & {
+            max-width: 90svw;
+        }
+    }
+
+}
