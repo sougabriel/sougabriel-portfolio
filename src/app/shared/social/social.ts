@@ -3,12 +3,13 @@ import { AsyncPipe, NgOptimizedImage } from '@angular/common';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { ContactService } from '@api/services';
 import { ClipboardModule } from '@angular/cdk/clipboard'
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
     selector: 'socials',
     standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [NgOptimizedImage, MatTooltipModule, ClipboardModule, AsyncPipe],
+    imports: [NgOptimizedImage, MatTooltipModule, ClipboardModule, AsyncPipe, MatButtonModule],
     templateUrl: './social.html',
     styleUrl: './social.scss',
 })

@@ -1,3 +1,10 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 img {
     margin: 0 10px;
     filter: grayscale(100%);

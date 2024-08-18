@@ -1,5 +1,5 @@
 @for (contact of (contacts$ | async); track contact) {
-<a [href]="contact.url" [matTooltip]="contact.type" target="_blank" [cdkCopyToClipboard]="contact.url">
+<a mat-mini-fab color="primary" [href]="contact.url" [matTooltip]="contact.type" target="_blank" [cdkCopyToClipboard]="contact.url">
     <img [src]="contact.iconUrl" [alt]="contact.iconAlt" [width]="width()" [height]="height()">
 </a>
 }
