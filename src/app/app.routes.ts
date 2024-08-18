@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: '', redirectTo: 'about', pathMatch: 'full' },
     {
-        path: 'home',
-        title: 'Homepage - Sou Gabriel',
-        loadComponent: () => import('./pages/homepage').then((m) => m.Homepage),
+        path: 'about',
+        title: 'About - Gabriel de Souza',
+        loadComponent: () => import('./pages/developer/developer.component').then((m) => m.DeveloperComponent),
     },
     {
         path: 'projects',

@@ -12,8 +12,8 @@
             </mat-toolbar>
 
             <mat-nav-list>
-                <a mat-list-item routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page"
-                    (click)="drawer.close()">Home</a>
+                <a mat-list-item routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page"
+                    (click)="drawer.close()">About Me</a>
                 <a mat-list-item routerLink="/projects" routerLinkActive="active" ariaCurrentWhenActive="page"
                     (click)="drawer.close()">Projects</a>
                 <div class="social">
@@ -50,8 +50,8 @@
             <div class="nav-menu">
                 @if (!(isHandset$ | async)) {
                 <nav>
-                    <a mat-button routerLink="/home" routerLinkActive="active"
-                        ariaCurrentWhenActive="page"><mat-icon>home</mat-icon>Homepage</a>
+                    <a mat-button routerLink="/about" routerLinkActive="active"
+                        ariaCurrentWhenActive="page"><mat-icon>home</mat-icon>About Me</a>
                     <a mat-button routerLink="/projects/list" routerLinkActive="active"
                         ariaCurrentWhenActive="page"><mat-icon>dvr</mat-icon>Projects</a>
                 </nav>
