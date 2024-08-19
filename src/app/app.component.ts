@@ -1,8 +1,6 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CookiePopup } from '@shared/services/cookie-popup/cookie.service';
 import { NavbarComponent } from '@shared/navbar/navbar.component';
-
 @Component({
     selector: 'app-root',
     standalone: true,
@@ -15,13 +13,4 @@ import { NavbarComponent } from '@shared/navbar/navbar.component';
     `,
     styles: ``,
 })
-export class AppComponent {
-    protected readonly cookieService = inject(CookiePopup);
-    constructor() {
-        console.clear();
-        this.cookieService.showSimpleMessage(
-            'This site does not uses cookies! Have a good time browsing.',
-            'Okay'
-        );
-    }
-}
+export class AppComponent {}
