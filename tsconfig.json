@@ -5,11 +5,18 @@
     "compilerOptions": {
         "outDir": "./dist/out-tsc",
         "paths": {
-            "baseUrl": ["./"],
-            "@api/*": ["./src/app/api/*"],
+            "baseUrl": [
+                "./"
+            ],
+            "@api/*": [
+                "./src/app/api/*"
+            ],
             "@shared/*": [
                 "./src/app/shared/*"
             ],
+            "@pages/*": [
+                "./src/app/pages/*"
+            ]
         },
         "strict": true,
         "noImplicitOverride": true,
