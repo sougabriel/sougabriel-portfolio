@@ -1,16 +1,12 @@
 :host {
     display: flex;
     margin: auto 0;
+    max-width: 90svw;
 
     @media (max-width: 1200px) {
         & {
             flex-direction: column;
-        }
-    }
 
-    @media (max-width: 600px) {
-        & {
-            max-width: 90svw;
         }
     }
 
