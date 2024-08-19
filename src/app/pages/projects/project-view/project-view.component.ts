@@ -7,7 +7,7 @@ import {
 import { MarkdownModule } from 'ngx-markdown';
 import { Project, ProjectService } from '@api/index';
 import { Router } from '@angular/router';
-import { ProjectInfoComponent } from './project-info/project-info.component';
+import { ProjectInfoComponent } from './project-info';
 
 @Component({
     selector: 'app-project-view',

@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { Developer } from '@api/interfaces';
-import { DeveloperAbout } from './about/about.component';
-import { DeveloperName } from './name/name.component';
-import { DeveloperHeadline } from './headline/headline.component';
-import { DeveloperCurriculum } from './curriculum/curriculum.component';
+import { DeveloperAbout } from './about';
+import { DeveloperName } from './name';
+import { DeveloperHeadline } from './headline';
+import { DeveloperCurriculum } from './curriculum';
 
 @Component({
   selector: 'informations',

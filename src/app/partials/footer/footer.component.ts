@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { LicensesComponent } from './licenses/licenses.component';
+import { LicensesComponent } from './licenses';
 import { MatDialog } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { Social } from '@shared/social/social';

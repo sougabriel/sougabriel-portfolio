@@ -2,7 +2,7 @@ import { AsyncPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ProjectService } from '@api/services';
-import { ProjectCardComponent } from '../project-card/project-card.component';
+import { ProjectCardComponent } from '../project-card';
 
 @Component({
     selector: 'app-projects',

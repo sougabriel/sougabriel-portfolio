@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { DeveloperService } from '@api/services';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { DeveloperAvatar } from './avatar/avatar.component';
-import { DeveloperInformations } from './informations/informations.component';
+import { DeveloperAvatar } from './avatar';
+import { DeveloperInformations } from './informations';
 
 @Component({
     selector: 'developer',
