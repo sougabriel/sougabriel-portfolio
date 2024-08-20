@@ -36,29 +36,29 @@ The repository adheres to the clean architecture principles.
   db.config.js
 
 /controllers
-  acesso.controller.js
-  emprestimo.controller.js
+  access.controller.js
+  lend.controller.js
   material.controller.js
-  pessoa.controller.js
-  projeto.controller.js
-  usuario.controller.js
+  person.controller.js
+  project.controller.js
+  user.controller.js
 
 /models
-  acesso.model.js
-  emprestimo.model.js
+  access.model.js
+  lend.model.js
   index.model.js
   material.model.js
-  pessoa.model.js
-  projeto.model.js
-  usuario.model.js
+  person.model.js
+  project.model.js
+  user.model.js
 
 /routes
-  acesso.route.js
-  emprestimo.route.js
+  access.route.js
+  lend.route.js
   material.route.js
-  pessoa.route.js
-  projeto.route.js
-  usuario.route.js
+  person.route.js
+  project.route.js
+  user.route.js
 ```
 
 The root directory contains:
