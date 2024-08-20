@@ -1,2 +1,2 @@
-export { SocialComponent } from './social';
+export { Social } from './social';
 export * from './icons';
