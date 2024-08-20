@@ -6,9 +6,9 @@ import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatListItem, MatNavList } from '@angular/material/list';
 import { MatIcon } from '@angular/material/icon';
 import { MatTooltip } from '@angular/material/tooltip';
-import { GithubIcon, LinkedInIcon } from '../social/icons';
+import { GithubIcon, LinkedInIcon } from '../social';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { FooterComponent } from '../../partials/footer/footer.component';
+import { FooterComponent } from '../../partials';
 import { BreakpointService } from '@shared/services';
 import { Theme, ThemePicker } from 'ngx-theme-picker';
 
