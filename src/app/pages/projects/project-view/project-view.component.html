@@ -1,5 +1,5 @@
 <app-project-info [project]="selectedProject()">
-    @if (this.doc()) {
-        <markdown [src]="doc()" />
+    @if (this.selectedProject()) {
+        <markdown [src]="'projects/' + selectedProject().short_name + '/documents/' + selectedProject().documentUrl" />
     }
 </app-project-info>

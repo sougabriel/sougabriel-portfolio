@@ -23,6 +23,7 @@ import { ProjectInfoComponent } from './project-info';
 export class ProjectViewComponent {
     protected initialProject: Project = {
         name: '',
+        short_name: '',
         keywords: [],
         resume: '',
         documentUrl: '',
@@ -32,18 +33,13 @@ export class ProjectViewComponent {
     protected readonly projectsService = inject(ProjectService);
     protected readonly router = inject(Router);
     protected selectedProject = signal<Project>(this.initialProject);
-    protected doc = signal<string>('');
 
     constructor() {
-        this.projectsService.getProjects().subscribe((sub) => {
-            sub.find((project) => {
-                if (
-                    project.name.replaceAll(' ', '') ==
-                    this.router.url.split('/').pop()
-                ) {
+        this.projectsService.getProjects().subscribe((projects) => {
+            projects.find((project) => {
+                if (project.short_name == this.router.url.split('/').pop()) {
                     if (project.documentUrl.endsWith('.md')) {
                         this.selectedProject.set(project);
-                        this.doc.set(project.documentUrl);
                     } else {
                         this.router.navigate(['/404']);
                     }
