@@ -1,5 +1,6 @@
 export interface Project {
     name: string;
+    short_name: string;
     keywords: string[];
     resume: string;
     documentUrl: string;
