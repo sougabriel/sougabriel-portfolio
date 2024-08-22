@@ -11,6 +11,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { FooterComponent } from '../../partials';
 import { BreakpointService } from '@shared/services';
 import { Theme, ThemePicker } from 'ngx-theme-picker';
+import { BackgroundComponent } from '@shared/background/background.component';
 
 @Component({
     selector: 'navbar',
@@ -33,10 +34,11 @@ import { Theme, ThemePicker } from 'ngx-theme-picker';
         RouterLink,
         RouterLinkActive,
         FooterComponent,
+        BackgroundComponent,
     ],
 })
 export class NavbarComponent {
-    protected readonly title: string = 'Gabriel de Souza';
+    protected readonly title = 'sougabriel'
     protected readonly breakpointService = inject(BreakpointService);
     protected readonly isHandset$ = this.breakpointService.isHandset();
     protected readonly drawer = viewChild<MatSidenav>('drawer');
@@ -46,7 +48,7 @@ export class NavbarComponent {
         this.drawer()?.toggle();
     }
 
-    protected themes: Theme[] = [
+    protected readonly themes: Theme[] = [
         {
             color: '#d7e3ff',
             displayName: 'Azure & Blue',
