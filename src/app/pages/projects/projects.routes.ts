@@ -8,7 +8,7 @@ export const routes: Routes = [
         children: [
             {
                 path: 'list',
-                title: 'Projects List - Sou Gabriel',
+                title: 'Projects List - Gabriel de Souza',
                 loadComponent: () =>
                     import('./projects-list/projects-list').then(
                         (c) => c.ProjectsList
@@ -16,6 +16,7 @@ export const routes: Routes = [
             },
             {
                 path: 'details/:project',
+                title: 'Project Details - Gabriel de Souza',
                 loadComponent: () =>
                     import('./project-view/project-view.component').then(
                         (c) => c.ProjectViewComponent
