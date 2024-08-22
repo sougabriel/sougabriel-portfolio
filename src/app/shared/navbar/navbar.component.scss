@@ -54,15 +54,3 @@
         margin-right: 10px;
     }
 }
-
-#background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -2;
-    filter: opacity(10%) invert(50%);
-    background-image: url("images/background.svg");
-    background-repeat: repeat;
-}
