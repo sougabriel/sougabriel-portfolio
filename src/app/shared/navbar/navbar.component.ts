@@ -10,8 +10,8 @@ import { GithubIcon, LinkedInIcon } from '../social';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { FooterComponent } from '../../partials';
 import { BreakpointService } from '@shared/services';
-import { Theme, ThemePicker } from 'ngx-theme-picker';
 import { BackgroundComponent } from '@shared/background/background.component';
+import { Theme, ThemePicker } from '@shared/theme';
 
 @Component({
     selector: 'navbar',
