@@ -1,8 +1,10 @@
-@defer {
+@defer (prefetch on idle) {
     <mat-toolbar class="toolbar-licenses">
-        <socials height="24" width="24"></socials>
-        <button mat-button (click)="this.openLicense('400ms', '200ms')">Open Licenses</button>
+        <mat-toolbar-row class="socials">
+            <socials height="24" width="24"></socials>
+        </mat-toolbar-row>
+        <mat-toolbar-row>
+            <button mat-button (click)="this.openLicense('400ms', '200ms')">Open Licenses</button>
+        </mat-toolbar-row>
     </mat-toolbar>
-} @placeholder {
-    footer
 }

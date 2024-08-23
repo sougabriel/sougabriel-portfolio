@@ -1,6 +1,12 @@
-.toolbar-licenses {
+.socials {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-toolbar-row {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     font-size: small;
     a {
