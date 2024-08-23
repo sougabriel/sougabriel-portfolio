@@ -7,6 +7,11 @@ import { RouterOutlet } from '@angular/router';
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [RouterOutlet],
     template: `<router-outlet />`,
-    styles: ``,
+    styles: `
+    :host {
+        display: block;
+        margin: 40px 0; 
+    }
+    `,
 })
 export class Projects {}
