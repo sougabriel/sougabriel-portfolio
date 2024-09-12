@@ -1,12 +1,14 @@
+import { Contributor } from "./contributor";
+
 export interface Project {
     name: string;
     short_name: string;
     keywords: string[];
-    resume: string;
+    summary: string;
     documentUrl: string;
     skills?: string[];
     sourceCodeUrl?: string;
     viewUrl?: string;
     imageUrl: string;
-    contributors?: string[];
+    contributors?: Contributor[];
 }
