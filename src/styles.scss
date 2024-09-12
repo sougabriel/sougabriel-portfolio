@@ -1,34 +1,28 @@
 html,
 body {
-    height: 100svh;
     scroll-behavior: smooth;
 }
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 main {
-    min-height: 85svh;
+    min-height: 90svh;
     display: flex;
     justify-content: center;
     align-items: start;
     margin: 10px auto;
-    max-width: 80svw;
-    @media (max-width: 1366px) {
-        & {
-            max-width: 85svw;
-        }
-    }
+    max-width: 90svw;
     @media (max-width: 800px) {
         & {
-            max-width: 90svw;
+            max-width: 100svw;
         }
     }
 }
 
 .title {
     text-align: center;
+    width: 100%;
 }
 
 .keyword {
