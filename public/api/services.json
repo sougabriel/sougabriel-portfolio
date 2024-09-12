@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Modern Web Applications",
+        "short_name": "modern-web-apps",
+        "summary": "I will build a web application using modern web api's and technologies. Following all best practices and better code development",
+        "technologies": ["Angular 17+", "RxJs", "Responsivity", "Interactivity"],
+        "documentUrl": "modern-web-apps.md",
+        "images": [
+            {
+                "src": "services/images/",
+                "alt": ""
+            }
+        ],
+        "thumbnail": "modern-web-apps.png"
+    },
+    {
+        "name": "Fullstack Applicaton",
+        "short_name": "fullstack-apps",
+        "summary": "Build a web, mobile and desktop application with modern frameworks. ",
+        "technologies": ["Angular", "Ionic", "Electron", "NodeJs"],
+        "documentUrl": "fullstack-apps.md",
+        "images": [
+            {
+                "src": "services/images/",
+                "alt": ""
+            }
+        ],
+        "thumbnail": "fullstack-apps.png"
+    },
+    {
+        "name": "Database Modeling",
+        "short_name": "db-modeling",
+        "summary": "",
+        "technologies": ["Structured Query Language", "Unified Modeling Language", "Diagramming"],
+        "documentUrl": "db-modeling.md",
+        "images": [
+            {
+                "src": "services/images/",
+                "alt": ""
+            }
+        ],
+        "thumbnail": "db-modeling.png"
+    },
+    {
+        "name": "RESTFul API Development",
+        "short_name": "api-dev",
+        "summary": "",
+        "technologies": ["NestJs", "Prisma ORM", "RxJs", "Auth"],
+        "documentUrl": "api-dev.md",
+        "images": [
+            {
+                "src": "services/api-dev/images/",
+                "alt": ""
+            }
+        ],
+        "thumbnail": "api-dev.png"
+    }
+]
