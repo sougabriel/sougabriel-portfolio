@@ -3,7 +3,7 @@
 This is a re-work of [material.angular.io](https://github.com/angular/material.angular.io) theme-picker component, with new signals inputs and more customizing. 
 
 <center>
-    <img alt="Changing page color schema by choosing a theme" src="https://raw.githubusercontent.com/sougabriel/ngx-sougabriel-libs/master/assets/theme-picker.gif" width="80%" />
+    <img alt="Changing page color schema by choosing a theme" src="https://raw.githubusercontent.com/sougabriel/ngx-sougabriel-libs/master/assets/theme-picker.gif" width="100%" />
 </center>
 
 ## Getting Started
@@ -14,9 +14,7 @@ This is a re-work of [material.angular.io](https://github.com/angular/material.a
 
 1. Import to Component:
 ```typescript
-import { 
-    Theme, 
-    ThemePicker } from 'ngx-theme-picker';
+import { Theme, ThemePicker } from 'ngx-theme-picker';
 
 @Component({
 	imports: [ThemePicker],
@@ -29,6 +27,7 @@ export class MyComponent {
       		name: 'azure-blue',
       		background: '#fdfbff'
       	},
+		...othersThemes
 	];
 }
 ```
@@ -43,7 +42,7 @@ export class MyComponent {
 "styles": [
 	{
     	"input": "src/styles/azure-blue.scss",
-    	"bundleName": "azure-blue",
+    	"bundleName": "azure-blue", <-- same name
     	"inject": false
 	},
 ],
