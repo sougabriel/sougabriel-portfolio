@@ -1,0 +1,29 @@
+<nav>
+    <a
+        i18n
+        mat-button
+        routerLink="/about"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        (click)="scrollToTop()"
+        ><mat-icon>home</mat-icon>About Me</a
+    >
+    <a
+        i18n
+        mat-button
+        routerLink="/projects/list"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        (click)="scrollToTop()"
+        ><mat-icon>dvr</mat-icon>Projects</a
+    >
+    <a
+        i18n
+        mat-button
+        routerLink="/services"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        (click)="scrollToTop()"
+        ><mat-icon>room_service</mat-icon>My Services</a
+    >
+</nav>

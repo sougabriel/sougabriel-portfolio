@@ -1,0 +1,11 @@
+@use '@angular/material' as mat;
+
+@mixin theme($theme) {
+  nav {
+    color: mat.get-theme-color($theme, primary);
+
+    .active {
+        background-color: mat.get-theme-color($theme, surface);
+    }
+  }
+}
