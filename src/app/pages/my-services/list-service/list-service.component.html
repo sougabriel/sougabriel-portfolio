@@ -1,0 +1,6 @@
+<section>
+    <h2 class="title">My Services</h2>
+    @for (service of (services$ | async); track service) {
+        <card-service [service]="service" />
+    }
+</section>

@@ -1,0 +1,15 @@
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+:host {
+    display: block;
+}
+
+section {
+    @include flex;
+    flex-direction: row;
+}
