@@ -5,19 +5,28 @@ export const routes: Routes = [
     {
         path: 'about',
         title: 'About - Gabriel de Souza',
-        loadComponent: () => import('./pages/developer/developer.component').then((m) => m.DeveloperComponent),
+        loadComponent: () =>
+            import('./pages/developer/developer.component').then(
+                (c) => c.DeveloperComponent
+            ),
     },
     {
         path: 'projects',
         title: 'Projects',
         loadChildren: () =>
-            import('./pages/projects/projects.routes').then((r) => r.routes),
+            import('./pages/projects').then((r) => r.PROJECTS_ROUTES),
+    },
+    {
+        path: 'services',
+        title: 'My Services',
+        loadChildren: () =>
+            import('./pages/my-services').then((r) => r.SERVICE_ROUTES),
     },
     {
         path: '404',
         title: 'Page Not Found',
         loadComponent: () =>
-            import('./pages/not-found').then((m) => m.NotFound),
+            import('./pages/not-found').then((c) => c.NotFound),
     },
     { path: '**', redirectTo: '/404' },
 ];
