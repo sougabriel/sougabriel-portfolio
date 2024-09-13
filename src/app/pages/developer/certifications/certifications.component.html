@@ -1,0 +1,23 @@
+<h3 class="title">Certifications</h3>
+@for (certification of (certifications$ | async); track $index) {
+<mat-card appearance="outlined">
+    <mat-card-header>
+        <mat-card-title>
+            {{ certification.name }}
+        </mat-card-title>
+        <span>
+            issued {{ certification.issued | date : "mediumDate" }}
+        </span>
+        <mat-card-subtitle>{{ certification.institute }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+            {{ certification.description }}
+        </p>
+        <a mat-button [href]="certification.credentialUrl" target="_blank">Credential URL</a> <br>  
+        @for (skill of certification.skills; track $index) {
+        <mat-chip>{{ skill }}</mat-chip>
+        }
+    </mat-card-content>
+</mat-card>
+}
