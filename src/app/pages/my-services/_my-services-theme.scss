@@ -1,0 +1,17 @@
+@use "@angular/material" as mat;
+
+@mixin theme($theme) {
+    a {
+        color: mat.get-theme-color($theme, primary);
+
+        &:hover {
+            mat-card {
+                @if mat.get-theme-type($theme) == dark {
+                    background-color: mat.get-theme-color($theme, primary, 10);
+                } @else {
+                    background-color: mat.get-theme-color($theme, primary, 90);
+                }
+            }
+        }
+    }
+}
