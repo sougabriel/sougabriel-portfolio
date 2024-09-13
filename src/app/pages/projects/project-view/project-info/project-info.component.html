@@ -23,12 +23,3 @@
 }
 
 <ng-content />
-
-@if (!project().contributors?.includes('')) {
-<div id="skills">
-    Contributors:
-    @for (contributor of project().contributors; track contributor) {
-        {{contributor}};
-    }
-</div>
-}
