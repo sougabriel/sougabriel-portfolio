@@ -7,7 +7,7 @@ import { MatTooltip } from '@angular/material/tooltip';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-project-info',
+  selector: 'project-info',
   standalone: true,
   imports: [MatButtonModule, MatIcon, MatChipsModule, MatTooltip, RouterLink],
   templateUrl: './project-info.component.html',
