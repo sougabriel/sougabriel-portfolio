@@ -1,6 +1,8 @@
 @use '@angular/material' as mat;
 
 @use "./shared/navbar/navbar-theme" as nav;
+@use "./pages/my-services/my-services-theme" as services;
+@use "./shared/navigation-routes/navigation-routes-theme" as navRoutes;
 @use "./pages/not-found/not-found-theme" as notFound;
 @use "./pages/projects/projects-list/projects-list-theme" as projectsList;
 
@@ -14,6 +16,8 @@
     }
 
     @include nav.theme($theme);
+    @include navRoutes.theme($theme);
     @include projectsList.theme($theme);
     @include notFound.theme($theme);
+    @include services.theme($theme);
 }

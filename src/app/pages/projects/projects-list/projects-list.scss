@@ -5,56 +5,7 @@
     flex-wrap: wrap;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-}
-
-mat-card {
-    margin: 10px 10px;
-    max-width: 428px;
-
-    @media (max-width: 768px) {
-        & {
-            max-width: 326px;
-        }
-
-        img {
-            max-width: 326px;
-            max-height: 183.38px;
-        }
-    }
-
-}
-
-mat-card-subtitle {
-    display: inline;
-    font-style: italic;
-    font-family: 'Times New Roman', serif;
-}
-
 section {
     @include flex;
     flex-direction: row;
-}
-
-.title {
-    text-align: center;
-}
-
-p {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
-    -webkit-box-orient: vertical;
-}
-
-mat-divider {
-    margin-top: 10px;
-}
-
-mat-card-actions {
-    justify-content: center;
 }

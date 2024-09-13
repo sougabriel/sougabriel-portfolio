@@ -1,3 +1,8 @@
+:host {
+    display: block;
+    margin-top: 40px;
+}
+
 .socials {
     display: flex;
     justify-content: center;
@@ -8,12 +13,5 @@ mat-toolbar-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: small;
-    a {
-        cursor: pointer;
-        &:hover {
-            text-decoration: underline;
-        }
-    }
 }
 

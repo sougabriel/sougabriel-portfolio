@@ -1,6 +1,13 @@
 $vertical-spacing: 64px;
 $horizontal-spacing: 32px;
 
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80svh;
+}
+
 .wrapper {
     display: flex;
     align-items: center;
