@@ -1,5 +1,5 @@
-<app-project-info [project]="selectedProject()">
-    @if (this.selectedProject()) {
+<project-info [project]="selectedProject()">
+    @if (this.selectedProject().documentUrl.endsWith('.md')) {
         <markdown [src]="'projects/' + selectedProject().short_name + '/documents/' + selectedProject().documentUrl" />
-    }
-</app-project-info>
+    } 
+</project-info>
