@@ -6,7 +6,7 @@
         <mat-toolbar class="menu-toolbar">
             <span>Menu</span>
             <button type="button" aria-label="close side navigation" mat-icon-button matTooltipPosition="right"
-                [matTooltip]="'close ' + (isHandset$ | async) ? 'dialog' : 'navigation'" (click)="drawer.close()">
+                matTooltip="close" (click)="drawer.close()">
                 <mat-icon>close</mat-icon>
             </button>
         </mat-toolbar>
@@ -16,6 +16,8 @@
                 (click)="drawer.close()">About Me</a>
             <a mat-list-item routerLink="/projects" routerLinkActive="active" ariaCurrentWhenActive="page"
                 (click)="drawer.close()">Projects</a>
+            <a mat-list-item routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page"
+                (click)="drawer.close()">My Services</a>
         </mat-nav-list>
         }
 
@@ -28,17 +30,11 @@
                 <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
                     <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
                 </button>
-                <span>{{ title }}</span>
             </div>
 
             <div class="nav-menu">
                 @if (!(isHandset$ | async)) {
-                <nav>
-                    <a mat-button routerLink="/about" routerLinkActive="active"
-                        ariaCurrentWhenActive="page"><mat-icon>home</mat-icon>About Me</a>
-                    <a mat-button routerLink="/projects/list" routerLinkActive="active"
-                        ariaCurrentWhenActive="page"><mat-icon>dvr</mat-icon>Projects</a>
-                </nav>
+                    <navigation-routes />
                 }
                 <div class="options">
                     <theme-picker [themes]="themes" />
@@ -51,9 +47,15 @@
             <ng-content />
         </main>
 
+        <div class="nav-routes">
+            <navigation-routes />
+        </div>
+
         <app-footer />
 
         <background />
+        
+        <scroll-to-top />
 
     </mat-sidenav-content>
 </mat-sidenav-container>
