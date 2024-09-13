@@ -1,4 +1,11 @@
-import { ChangeDetectionStrategy, Component, HostListener, inject, viewChild } from '@angular/core';
+import {
+    ChangeDetectionStrategy,
+    Component,
+    HostListener,
+    inject,
+    Renderer2,
+    viewChild,
+} from '@angular/core';
 import { AsyncPipe } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -6,12 +13,14 @@ import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatListItem, MatNavList } from '@angular/material/list';
 import { MatIcon } from '@angular/material/icon';
 import { MatTooltip } from '@angular/material/tooltip';
-import { GithubIcon, LinkedInIcon } from '../social';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { FooterComponent } from '../../partials';
 import { BreakpointService } from '@shared/services';
 import { BackgroundComponent } from '@shared/background/background.component';
-import { Theme, ThemePicker } from '@shared/theme';
+import { ThemePicker } from '@shared/theme';
+import { ScrollToTopComponent } from '../../partials/scroll/scroll-to-top.component';
+import { NavigationRoutesComponent } from '@shared/navigation-routes/navigation-routes.component';
+import { THEMES } from '@shared/theme/themes';
 
 @Component({
     selector: 'navbar',
@@ -29,49 +38,46 @@ import { Theme, ThemePicker } from '@shared/theme';
         MatIcon,
         AsyncPipe,
         ThemePicker,
-        GithubIcon,
-        LinkedInIcon,
         RouterLink,
         RouterLinkActive,
         FooterComponent,
         BackgroundComponent,
+        ScrollToTopComponent,
+        NavigationRoutesComponent,
     ],
 })
 export class NavbarComponent {
-    protected readonly title = 'sougabriel'
-    protected readonly breakpointService = inject(BreakpointService);
-    protected readonly isHandset$ = this.breakpointService.isHandset();
-    protected readonly drawer = viewChild<MatSidenav>('drawer');
+    protected readonly isHandset$ = inject(BreakpointService).isHandset();
+    protected readonly drawer = viewChild.required<MatSidenav>('drawer');
+    protected readonly router = inject(Router);
+    protected readonly renderer = inject(Renderer2);
+
+    protected readonly themes = THEMES;
 
     @HostListener('window:keyup.escape')
     toggleNavBar() {
-        this.drawer()?.toggle();
+        this.drawer().toggle();
     }
 
-    protected readonly themes: Theme[] = [
-        {
-            color: '#d7e3ff',
-            displayName: 'Azure & Blue',
-            name: 'azure-blue',
-            background: '#fdfbff'
-        },
-        {
-            color: '#ffd9e1',
-            displayName: 'Rose & Red',
-            name: 'rose-red',
-            background: '#fffbff'
-        },
-        {
-            color: '#810081',
-            displayName: 'Magenta & Violet',
-            name: 'magenta-violet',
-            background: '#1e1a1d'
-        },
-        {
-            color: '#004f4f',
-            displayName: 'Cyan & Orange',
-            name: 'cyan-orange',
-            background: '#191c1c'
-        },
-    ];
+    constructor() {
+        this.renderer.listen('body', 'keyup', (e) => {
+            const event = e as KeyboardEvent;
+            if (this.drawer()?.opened) {
+                switch (event.key) {
+                    case '1':
+                        this.router.navigate(['/about']);
+                        break;
+                    case '2':
+                        this.router.navigate(['/projects']);
+                        break;
+                    case '3':
+                        this.router.navigate(['/services']);
+                        break;
+                    default:
+                        break;
+                }
+                this.drawer()?.close();
+            }
+        });
+    }
 }
