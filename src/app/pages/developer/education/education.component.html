@@ -1,0 +1,23 @@
+<h3 class="title">Education</h3>
+@for (education of (education$ | async); track $index) {
+<mat-card appearance="outlined">
+    <mat-card-header>
+        <mat-card-title>
+            {{ education.institute }}
+        </mat-card-title>
+        <span>
+            {{ education.startDate | date : "mediumDate" }} |
+            {{ education.endDate | date : "mediumDate" }}
+        </span>
+        <mat-card-subtitle>{{ education.course }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+            {{ education.description }}
+        </p>
+        @for (skill of education.skills; track $index) {
+        <mat-chip>{{ skill }}</mat-chip>
+        }
+    </mat-card-content>
+</mat-card>
+}
