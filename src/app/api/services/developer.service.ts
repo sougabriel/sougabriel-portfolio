@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, shareReplay, Subject } from 'rxjs';
+import { Observable, shareReplay } from 'rxjs';
 import { Developer } from '../interfaces';
 import { BaseHttpClientService } from './base-http-client.service';
 
