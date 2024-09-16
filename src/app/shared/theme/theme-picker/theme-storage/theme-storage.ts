@@ -1,29 +1,30 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { Theme } from './theme';
+import { THEMES } from '@shared/theme/themes';
 
 @Injectable({ providedIn: 'root' })
 export class ThemeStorage {
-    static storageKey = 'theme';
+    protected readonly storageKey = 'theme';
     onThemeUpdate: EventEmitter<Theme> = new EventEmitter<Theme>();
 
     storeTheme(theme: Theme) {
         try {
-            window.localStorage[ThemeStorage.storageKey] = theme.name;
+            localStorage[this.storageKey] = theme.name;
         } catch {}
         this.onThemeUpdate.emit(theme);
     }
 
-    getStoredThemeName(): string | null {
+    getStoredThemeName(): string {
         try {
-            return window.localStorage[ThemeStorage.storageKey] || null;
+            return localStorage[this.storageKey] || THEMES[0].name;
         } catch {
-            return null;
+            return THEMES[0].name;
         }
     }
 
     clearStorage() {
         try {
-            window.localStorage.removeItem(ThemeStorage.storageKey);
+            localStorage.removeItem(this.storageKey);
         } catch {}
     }
 }
