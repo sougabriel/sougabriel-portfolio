@@ -10,16 +10,16 @@ export const SERVICE_ROUTES: Routes = [
                 path: 'list',
                 title: 'Services - Gabriel de Souza',
                 loadComponent: () =>
-                    import('./list-service/list-service.component').then(
-                        (c) => c.ListServiceComponent
+                    import('./service-list/service-list.component').then(
+                        (c) => c.ServiceListComponent
                     ),
             },
             {
                 path: 'details/:service',
                 title: 'Service Details',
                 loadComponent: () =>
-                    import('./view-service/view-service.component').then(
-                        (c) => c.ViewServiceComponent
+                    import('./service-view/service-view.component').then(
+                        (c) => c.ServiceViewComponent
                     ),
             },
             {
