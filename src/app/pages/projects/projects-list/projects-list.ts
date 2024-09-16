@@ -5,7 +5,7 @@ import { ProjectService } from '@api/services';
 import { ProjectCardComponent } from '../project-card';
 
 @Component({
-    selector: 'app-projects',
+    selector: 'projects-list',
     standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [ProjectCardComponent, RouterLink, AsyncPipe],
