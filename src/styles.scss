@@ -7,13 +7,12 @@ body {
 }
 
 main {
-    min-height: 90svh;
     display: flex;
     justify-content: center;
     align-items: start;
     margin: 10px auto;
     max-width: 90svw;
-    @media (max-width: 800px) {
+    @media (max-width: 1200px) {
         & {
             max-width: 96svw;
         }
