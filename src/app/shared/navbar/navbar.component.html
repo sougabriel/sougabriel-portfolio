@@ -1,46 +1,71 @@
 <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-        [mode]="(isHandset$ | async) ? 'push' : 'over'" [autoFocus]="false">
-
-        @defer (prefetch on idle) {
+    <mat-sidenav
+        #drawer
+        class="sidenav"
+        fixedInViewport
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'push' : 'over'"
+        [autoFocus]="false"
+    >
         <mat-toolbar class="menu-toolbar">
             <span>Menu</span>
-            <button type="button" aria-label="close side navigation" mat-icon-button matTooltipPosition="right"
-                matTooltip="close" (click)="drawer.close()">
+            <button
+                type="button"
+                aria-label="close side navigation"
+                mat-icon-button
+                matTooltipPosition="right"
+                matTooltip="close"
+                (click)="drawer.close()"
+            >
                 <mat-icon>close</mat-icon>
             </button>
         </mat-toolbar>
 
         <mat-nav-list>
-            <a mat-list-item routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page"
-                (click)="drawer.close()">About Me</a>
-            <a mat-list-item routerLink="/projects" routerLinkActive="active" ariaCurrentWhenActive="page"
-                (click)="drawer.close()">Projects</a>
-            <a mat-list-item routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page"
-                (click)="drawer.close()">My Services</a>
+            <a
+                mat-list-item
+                routerLink="/about"
+                routerLinkActive="active"
+                ariaCurrentWhenActive="page"
+                (click)="drawer.close()"
+                >About Me</a
+            >
+            <a
+                mat-list-item
+                routerLink="/projects"
+                routerLinkActive="active"
+                ariaCurrentWhenActive="page"
+                (click)="drawer.close()"
+                >Projects</a
+            >
+            <!-- 
+                <a mat-list-item routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page"
+                (click)="drawer.close()">My Services</a> 
+            -->
         </mat-nav-list>
-        }
-
     </mat-sidenav>
 
     <mat-sidenav-content>
-
         <mat-toolbar color="primary" class="nav-header">
             <div class="menu-title">
-                <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+                <button
+                    type="button"
+                    aria-label="Toggle sidenav"
+                    mat-icon-button
+                    (click)="drawer.toggle()"
+                >
                     <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
                 </button>
             </div>
 
             <div class="nav-menu">
                 @if (!(isHandset$ | async)) {
-                    <navigation-routes />
+                <navigation-routes />
                 }
                 <div class="options">
                     <theme-picker [themes]="themes" />
                 </div>
             </div>
-
         </mat-toolbar>
 
         <main>
@@ -54,8 +79,7 @@
         <app-footer />
 
         <background />
-        
-        <scroll-to-top />
 
+        <scroll-to-top />
     </mat-sidenav-content>
 </mat-sidenav-container>
