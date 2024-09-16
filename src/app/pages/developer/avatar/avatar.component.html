@@ -1,5 +1,5 @@
-<img id="profile" class="floating" [ngSrc]="developer().profileImageUrl!" [alt]="developer().profileImageAlt"
+<img class="floating" [ngSrc]="developer().profileImageUrl!" [alt]="developer().profileImageAlt"
     height="380" width="380" priority />
-<button class="status floating" mat-mini-fab [matTooltip]="developer().status" matTooltipPosition="right">
+<button class="floating" mat-icon-button [matTooltip]="developer().status" matTooltipPosition="right">
     {{ developer().statusEmoji }}
 </button>
