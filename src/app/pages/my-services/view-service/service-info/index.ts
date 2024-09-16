@@ -1,1 +1,0 @@
-export { ServiceInfoComponent } from './service-info.component';
