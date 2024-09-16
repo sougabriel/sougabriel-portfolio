@@ -6,6 +6,5 @@ export interface Developer {
     status: string;
     headline: string;
     about: string;
-    pronouns: string;
     topSkills: string[];
 }
