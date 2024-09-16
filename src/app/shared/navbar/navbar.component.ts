@@ -1,7 +1,6 @@
 import {
     ChangeDetectionStrategy,
     Component,
-    HostListener,
     inject,
     Renderer2,
     viewChild,
@@ -54,13 +53,16 @@ export class NavbarComponent {
 
     protected readonly themes = THEMES;
 
-    @HostListener('window:keyup.escape')
-    toggleNavBar() {
-        this.drawer().toggle();
-    }
 
     constructor() {
-        this.renderer.listen('body', 'keyup', (e) => {
+        this.renderer.listen('document', 'keyup', (e) => {
+            const event = e as KeyboardEvent;
+            if (event.key === 'Escape') {
+                this.drawer().toggle();
+            }
+        });
+
+        this.renderer.listen('body', 'keypress', (e) => {
             const event = e as KeyboardEvent;
             if (this.drawer()?.opened) {
                 switch (event.key) {
