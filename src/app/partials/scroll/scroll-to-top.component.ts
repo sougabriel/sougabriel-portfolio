@@ -21,9 +21,9 @@ import { MatTooltip } from '@angular/material/tooltip';
         <button
             mat-mini-fab
             #scrollButton
-            matTooltip="Scroll to Top"
+            matTooltip="scroll to top"
             matTooltipPosition="above"
-            [disabled]="isDisabled()"
+            [disabled]="this.isDisabled()"
         >
             <mat-icon>arrow_upward</mat-icon>
         </button>
@@ -33,7 +33,7 @@ import { MatTooltip } from '@angular/material/tooltip';
             position: fixed;
             bottom: 4svh;
             right: 4svw;
-            opacity: 60%;
+            opacity: 50%;
         }
     `,
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -59,8 +59,12 @@ export class ScrollToTopComponent implements AfterViewInit, OnDestroy {
     ngAfterViewInit(): void {
         const scroll = this.scrollButton().nativeElement;
         this.unListen = this.renderer.listen(scroll, 'click', () => {
-                window.scrollTo({ top: 0 });
+                this.scrollToTop();
             });
+    }
+
+    scrollToTop() {
+        window.scrollTo({ top: 0 });
     }
 
     ngOnDestroy(): void {
