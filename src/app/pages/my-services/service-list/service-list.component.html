@@ -1,0 +1,6 @@
+<section role="list">
+    <h2 class="title">My Services</h2>
+    @for (service of (services$ | async); track service) {
+        <service-card role="listitem" [service]="service" />
+    }
+</section>

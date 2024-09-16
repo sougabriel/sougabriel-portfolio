@@ -1,0 +1,5 @@
+<service-info [service]="selectedService()">
+    @if (this.selectedService().documentUrl.endsWith('.md')) {
+        <markdown [src]="'services/' + selectedService().short_name + '/document/' + selectedService().documentUrl" />
+    }
+</service-info>
