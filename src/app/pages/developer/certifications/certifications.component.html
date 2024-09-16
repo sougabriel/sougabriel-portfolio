@@ -1,6 +1,6 @@
 <h3 class="title">Certifications</h3>
 @for (certification of (certifications$ | async); track $index) {
-<mat-card appearance="outlined">
+<mat-card appearance="outlined" role="listitem">
     <mat-card-header>
         <mat-card-title>
             {{ certification.name }}

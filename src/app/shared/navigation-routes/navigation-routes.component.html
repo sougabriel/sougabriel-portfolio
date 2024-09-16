@@ -1,6 +1,5 @@
-<nav>
+<nav role="navigation">
     <a
-        i18n
         mat-button
         routerLink="/about"
         routerLinkActive="active"
@@ -9,7 +8,6 @@
         ><mat-icon>home</mat-icon>About Me</a
     >
     <a
-        i18n
         mat-button
         routerLink="/projects/list"
         routerLinkActive="active"
@@ -17,8 +15,8 @@
         (click)="scrollToTop()"
         ><mat-icon>dvr</mat-icon>Projects</a
     >
+    <!--
     <a
-        i18n
         mat-button
         routerLink="/services"
         routerLinkActive="active"
@@ -26,4 +24,5 @@
         (click)="scrollToTop()"
         ><mat-icon>room_service</mat-icon>My Services</a
     >
+    -->
 </nav>

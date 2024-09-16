@@ -1,6 +1,6 @@
 <h2 class="title">Projects</h2>
-<section>
+<section role="list">
     @for (project of (projects$ | async); track project) {
-        <project-card [project]="project"></project-card>
+        <project-card role="listitem" [project]="project" />
     }
 </section>
