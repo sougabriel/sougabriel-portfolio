@@ -7,7 +7,7 @@
         }
     </mat-card-header>
 
-    <img mat-card-image [ngSrc]="'projects/' + this.project().short_name + '/thumbnails/' + this.project().imageUrl" height="240" width="426" priority />
+    <img mat-card-image [ngSrc]="'projects/' + this.project().short_name + '/thumbnails/' + this.project().imageUrl" [title]="project().name + ' thumbnail'" height="240" width="426" priority />
 
     <mat-card-content>
         <p>
