@@ -10,8 +10,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: start;
-    margin: 10px auto;
+    margin: 64px auto;
     max-width: 90svw;
+    min-height: 100svh;
     @media (max-width: 1200px) {
         & {
             max-width: 96svw;

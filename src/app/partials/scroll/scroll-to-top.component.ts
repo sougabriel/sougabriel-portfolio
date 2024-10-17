@@ -1,5 +1,5 @@
 import {
-    AfterViewInit,
+    AfterContentInit,
     ChangeDetectionStrategy,
     Component,
     ElementRef,
@@ -33,16 +33,19 @@ import { MatTooltip } from '@angular/material/tooltip';
             position: fixed;
             bottom: 4svh;
             right: 4svw;
-            opacity: 50%;
+            opacity: 0.5;
+            &:hover {
+                opacity: 1;
+            }
         }
     `,
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ScrollToTopComponent implements AfterViewInit, OnDestroy {
+export class ScrollToTopComponent implements AfterContentInit, OnDestroy {
     protected readonly scrollButton = viewChild.required('scrollButton', {
         read: ElementRef,
     });
-    
+
     protected readonly isDisabled = signal<boolean>(true);
     protected readonly renderer = inject(Renderer2);
     protected unListen: () => void;
@@ -56,11 +59,11 @@ export class ScrollToTopComponent implements AfterViewInit, OnDestroy {
             }
         });
     }
-    ngAfterViewInit(): void {
-        const scroll = this.scrollButton().nativeElement;
+    ngAfterContentInit(): void {
+        const scroll: HTMLElement = this.scrollButton().nativeElement;
         this.unListen = this.renderer.listen(scroll, 'click', () => {
-                this.scrollToTop();
-            });
+            this.scrollToTop();
+        });
     }
 
     scrollToTop() {

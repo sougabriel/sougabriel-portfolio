@@ -46,31 +46,10 @@
     </mat-sidenav>
 
     <mat-sidenav-content>
-        <mat-toolbar color="primary" class="nav-header">
-            <div class="menu-title">
-                <button
-                    type="button"
-                    aria-label="Toggle sidenav"
-                    mat-icon-button
-                    (click)="drawer.toggle()"
-                >
-                    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-                </button>
-            </div>
 
-            <div class="nav-menu">
-                @if (!(isHandset$ | async)) {
-                <navigation-routes />
-                }
-                <div class="options">
-                    <theme-picker [themes]="themes" />
-                </div>
-            </div>
-        </mat-toolbar>
+        <app-header [drawer]="drawer" />
 
-        <main>
-            <ng-content />
-        </main>
+        <ng-content />
 
         <div class="nav-routes">
             <navigation-routes />

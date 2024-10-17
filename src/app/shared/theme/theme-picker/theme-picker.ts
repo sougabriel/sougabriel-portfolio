@@ -7,8 +7,8 @@ import {
     OnInit,
     ViewEncapsulation,
 } from '@angular/core';
-import { StyleManager } from '../style-manager/style-manager.service';
-import { Theme, ThemeStorage } from './theme-storage/index';
+import { StyleManager } from '../style-manager';
+import { Theme, ThemeStorage } from './theme-storage';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';

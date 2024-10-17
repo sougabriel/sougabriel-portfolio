@@ -1,13 +1,12 @@
-@for (contact of (contacts$ | async); track contact) {
+@for (contact of contacts; track contact) {
 <a
     mat-mini-fab
     [href]="contact.url"
     [matTooltip]="contact.type"
     target="_blank"
-    [cdkCopyToClipboard]="contact.url"
 >
     <img
-        [src]="contact.iconUrl"
+        [ngSrc]="contact.iconUrl"
         [alt]="contact.iconAlt"
         [width]="width()"
         [height]="height()"

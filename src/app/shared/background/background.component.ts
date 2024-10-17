@@ -7,4 +7,4 @@ import { Component } from "@angular/core";
     template: ``,
     styleUrl: './background.component.scss'
 })
-export class BackgroundComponent{}
+export class BackgroundComponent {}

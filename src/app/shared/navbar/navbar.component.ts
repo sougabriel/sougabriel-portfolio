@@ -16,10 +16,9 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { FooterComponent } from '../../partials';
 import { BreakpointService } from '@shared/services';
 import { BackgroundComponent } from '@shared/background/background.component';
-import { ThemePicker } from '@shared/theme';
 import { ScrollToTopComponent } from '../../partials/scroll/scroll-to-top.component';
 import { NavigationRoutesComponent } from '@shared/navigation-routes/navigation-routes.component';
-import { THEMES } from '@shared/theme/themes';
+import { HeaderComponent } from '../../partials/header/header.component';
 
 @Component({
     selector: 'navbar',
@@ -36,13 +35,13 @@ import { THEMES } from '@shared/theme/themes';
         MatListItem,
         MatIcon,
         AsyncPipe,
-        ThemePicker,
         RouterLink,
         RouterLinkActive,
         FooterComponent,
         BackgroundComponent,
         ScrollToTopComponent,
         NavigationRoutesComponent,
+        HeaderComponent
     ],
 })
 export class NavbarComponent {
@@ -50,9 +49,6 @@ export class NavbarComponent {
     protected readonly drawer = viewChild.required<MatSidenav>('drawer');
     protected readonly router = inject(Router);
     protected readonly renderer = inject(Renderer2);
-
-    protected readonly themes = THEMES;
-
 
     constructor() {
         this.renderer.listen('document', 'keyup', (e) => {
@@ -64,7 +60,7 @@ export class NavbarComponent {
 
         this.renderer.listen('body', 'keypress', (e) => {
             const event = e as KeyboardEvent;
-            if (this.drawer()?.opened) {
+            if (this.drawer().opened) {
                 switch (event.key) {
                     case '1':
                         this.router.navigate(['/about']);
@@ -72,9 +68,11 @@ export class NavbarComponent {
                     case '2':
                         this.router.navigate(['/projects']);
                         break;
+                    /*
                     case '3':
                         this.router.navigate(['/services']);
                         break;
+                    */
                     default:
                         break;
                 }

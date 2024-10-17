@@ -1,16 +1,20 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable, RendererFactory2 } from '@angular/core';
 
 /**
- * Class for managing stylesheets. Stylesheets are loaded into
- * named slots so that they can be removed or changed later.
+ * Injectable class for managing stylesheets. Stylesheets are loaded into
+ * the head element and they can be removed or changed later.
  */
 @Injectable({ providedIn: 'root' })
 export class StyleManager {
+    protected readonly renderer = inject(RendererFactory2);
+    protected readonly render = this.renderer.createRenderer(null, null);
+
     /**
      * Set the stylesheet with the specified key.
      */
     setStyle(key: string, href: string) {
-        this.getLinkElementForKey(key).setAttribute('href', href);
+        const el = this.getLinkElementForKey(key);
+        el.setAttribute('href', href);
     }
 
     /**
@@ -19,7 +23,7 @@ export class StyleManager {
     removeStyle(key: string) {
         const existingLinkElement = this.getExistingLinkElementByKey(key);
         if (existingLinkElement) {
-            document.head.removeChild(existingLinkElement);
+            this.render.removeChild(document.head, existingLinkElement);
         }
     }
 
@@ -32,19 +36,15 @@ export class StyleManager {
 
     protected getExistingLinkElementByKey(key: string) {
         return document.head.querySelector(
-            `link[rel="stylesheet"].${this.getClassNameForKey(key)}`
+            `link[rel="stylesheet"].${key}`
         );
     }
 
     protected createLinkElementWithKey(key: string) {
-        const linkEl = document.createElement('link');
-        linkEl.setAttribute('rel', 'stylesheet');
-        linkEl.classList.add(this.getClassNameForKey(key));
-        document.head.appendChild(linkEl);
+        const linkEl = this.render.createElement('link');
+        this.render.setAttribute(linkEl, 'rel', 'stylesheet')
+        this.render.addClass(linkEl, `${key}`);
+        this.render.appendChild(document.head, linkEl);
         return linkEl;
-    }
-
-    protected getClassNameForKey(key: string) {
-        return `style-manager-${key}`;
     }
 }

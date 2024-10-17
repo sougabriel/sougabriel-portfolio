@@ -1,15 +1,14 @@
-import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
-import { AsyncPipe, NgOptimizedImage } from '@angular/common';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { ContactService } from '@api/services';
-import { ClipboardModule } from '@angular/cdk/clipboard'
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
+import { MatTooltip } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
+import { contacts } from '@api/contacts';
 
 @Component({
     selector: 'socials',
     standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [NgOptimizedImage, MatTooltipModule, ClipboardModule, AsyncPipe, MatButtonModule],
+    imports: [NgOptimizedImage, MatTooltip, MatButtonModule],
     templateUrl: './social.html',
     styleUrl: './social.scss',
 })
@@ -17,6 +16,5 @@ export class Social {
     height = input<string>('64');
     width = input<string>('64');
 
-    protected readonly contactService = inject(ContactService);
-    protected readonly contacts$ = this.contactService.getContacts();
+    protected readonly contacts = contacts;
 }

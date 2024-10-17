@@ -1,6 +1,7 @@
 import { Contributor } from "./contributor";
 
 export interface Project {
+    id?: number;
     name: string;
     short_name: string;
     keywords: string[];

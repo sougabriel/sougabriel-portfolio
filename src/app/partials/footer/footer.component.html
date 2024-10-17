@@ -1,4 +1,4 @@
-@defer (prefetch on idle) {
+@defer (on viewport; prefetch on idle) {
     <mat-toolbar class="toolbar-licenses">
         <mat-toolbar-row class="socials">
             <socials height="24" width="24"></socials>
@@ -7,4 +7,6 @@
             <button mat-button (click)="this.openLicense('400ms', '200ms')">Open Licenses</button>
         </mat-toolbar-row>
     </mat-toolbar>
+} @placeholder {
+    <p>loading</p>
 }
