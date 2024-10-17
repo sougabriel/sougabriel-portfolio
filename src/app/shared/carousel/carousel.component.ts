@@ -13,28 +13,26 @@ import { animate, style, transition, trigger } from '@angular/animations';
     styleUrl: './carousel.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
     animations: [
-      trigger('carouselAnimation', [
-        transition('void => *', [
-          style({ opacity: 0 }),
-          animate('300ms', style({ opacity: 1 }))
+        trigger('carouselAnimation', [
+            transition('void => *', [
+                style({ opacity: 0 }),
+                animate('300ms', style({ opacity: 1 })),
+            ]),
+            transition('* => void', [animate('300ms', style({ opacity: 0 }))]),
         ]),
-        transition('* => void', [
-          animate('300ms', style({ opacity: 0 }))
-        ])
-      ])
-    ]
+    ],
 })
 export class CarouselComponent {
-  images = input.required<ImageCarousel[]>();
-  protected currentImage = 0;
+    images = input.required<ImageCarousel[]>();
+    protected currentImage = 0;
 
-  onPreviousClick() {
-    const previous = this.currentImage - 1;
-    this.currentImage = previous < 0 ? this.images().length - 1 : previous;
-  }
+    onPreviousClick() {
+        const previous = this.currentImage - 1;
+        this.currentImage = previous < 0 ? this.images().length - 1 : previous;
+    }
 
-  onNextClick() {
-    const next = this.currentImage + 1;
-    this.currentImage = next === this.images().length ? 0 : next;
-  }
+    onNextClick() {
+        const next = this.currentImage + 1;
+        this.currentImage = next === this.images().length ? 0 : next;
+    }
 }
