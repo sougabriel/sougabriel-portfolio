@@ -1,5 +1,4 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { Developer } from '@api/interfaces';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'name',
@@ -9,6 +8,4 @@ import { Developer } from '@api/interfaces';
   styleUrl: './name.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class DeveloperName {
-    developer = input.required<Developer>();
-}
+export class DeveloperName {}

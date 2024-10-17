@@ -1,5 +1,4 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { Developer } from '@api/interfaces';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
     selector: 'headline',
@@ -9,6 +8,4 @@ import { Developer } from '@api/interfaces';
     styleUrl: './headline.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DeveloperHeadline {
-    developer = input.required<Developer>();
-}
+export class DeveloperHeadline {}

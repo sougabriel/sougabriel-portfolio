@@ -1,8 +1,7 @@
 import { NgOptimizedImage } from '@angular/common';
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltip } from '@angular/material/tooltip';
-import { Developer } from '@api/interfaces';
 
 @Component({
     selector: 'avatar',
@@ -12,6 +11,4 @@ import { Developer } from '@api/interfaces';
     styleUrl: './avatar.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DeveloperAvatar {
-    developer = input.required<Developer>();
-}
+export class DeveloperAvatar {}

@@ -1,13 +1,12 @@
 <article>
-    @if (developer() != undefined) {
-        <section role="doc-introduction">
-            <avatar [developer]="developer()!" />
-            <informations [developer]="developer()!" />
-        </section>
-    }
-    <education role="list"/>
-    <certifications role="list"/>
+    <section role="doc-introduction">
+        <avatar />
+        <informations />
+    </section>
 
+    <education role="list" />
+    <certifications role="list" />
+    
     <h4 class="title">More About Me</h4>
     <p>
         My name is Gabriel de Souza, and I am an entry-level programmer with

@@ -1,6 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { DeveloperService } from '@api/services';
-import { toSignal } from '@angular/core/rxjs-interop';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { DeveloperAvatar } from './avatar';
 import { DeveloperInformations } from './informations';
 import { CertificationsComponent } from './certifications';
@@ -19,7 +17,4 @@ import { EducationComponent } from './education';
     styleUrl: './developer.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DeveloperComponent {
-    protected readonly devService = inject(DeveloperService);
-    protected readonly developer = toSignal(this.devService.getDeveloper());
-}
+export class DeveloperComponent {}

@@ -1,10 +1,10 @@
-import { AsyncPipe, DatePipe } from '@angular/common';
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { DatePipe } from '@angular/common';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatTooltip } from '@angular/material/tooltip';
-import { EducationService } from '@api/services/education.service';
+import { education } from '@api/education';
 
 @Component({
     selector: 'education',
@@ -14,7 +14,6 @@ import { EducationService } from '@api/services/education.service';
         MatTooltip,
         MatButtonModule,
         MatChipsModule,
-        AsyncPipe,
         DatePipe,
     ],
     templateUrl: './education.component.html',
@@ -22,6 +21,5 @@ import { EducationService } from '@api/services/education.service';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EducationComponent {
-    protected readonly educationService = inject(EducationService);
-    protected readonly education$ = this.educationService.getEducation();
+    protected readonly education = education;
 }
