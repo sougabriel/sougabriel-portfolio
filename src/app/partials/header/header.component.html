@@ -1,0 +1,25 @@
+<mat-toolbar
+    color="primary"
+    class="nav-header"
+    [@openClose]="isOpen() ? 'open' : 'closed'"
+>
+    <div class="menu-title">
+        <button
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            (click)="drawer().toggle()"
+        >
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+    </div>
+
+    <div class="nav-menu">
+        @if (!(isHandset$ | async)) {
+            <navigation-routes />
+        }
+        <div class="options">
+            <theme-picker [themes]="themes" />
+        </div>
+    </div>
+</mat-toolbar>
