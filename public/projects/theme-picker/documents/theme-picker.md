@@ -2,10 +2,6 @@
 
 This is a re-work of [material.angular.io](https://github.com/angular/material.angular.io) theme-picker component, with new signals inputs and more customizing. 
 
-<center>
-    <img alt="Changing page color schema by choosing a theme" src="https://raw.githubusercontent.com/sougabriel/ngx-sougabriel-libs/master/assets/theme-picker.gif" width="100%" />
-</center>
-
 ## Getting Started
 
 **Install.** Run `npm i ngx-theme-picker`

@@ -1,10 +1,6 @@
 # Cookie Popup
 
-A Lib to show cookie popup and set it on localStorage if accepted. Provide 'showMessageFromComponent' method to implement cookie logic in your application.  
-
-<center>
-    <img alt="Cookie popup message Appers with a accept button" src="https://raw.githubusercontent.com/sougabriel/ngx-sougabriel-libs/master/assets/cookie-popup.gif" width="80%"/>
-</center>
+A Lib to show cookie popup and set it on localStorage if accepted. Provide 'showMessageFromComponent' method to implement cookie logic in your application.
 
 ## Getting Started
 
