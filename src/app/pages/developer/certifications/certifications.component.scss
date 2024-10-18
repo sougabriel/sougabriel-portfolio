@@ -4,7 +4,7 @@
     align-items: center;
     flex-wrap: wrap;
     margin: 40px auto;
-    @media (max-width: 800px) {
+    @media (max-width: 960px) {
         & {
           width: 100%;
         }
@@ -12,8 +12,13 @@
 }
 
 mat-card {
-    min-width: 100%;
-    margin: 10px 0;
+    max-width: 45%;
+    margin: 10px 10px;
+    @media (max-width: 960px) {
+        & {
+          max-width: 100%;
+        }
+    }
 }
 
 mat-card-header {
