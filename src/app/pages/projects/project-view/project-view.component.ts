@@ -5,9 +5,10 @@ import {
     signal,
 } from '@angular/core';
 import { MarkdownModule } from 'ngx-markdown';
-import { Project, ProjectService } from '@api/index';
+import { Project } from '@api/index';
 import { Router } from '@angular/router';
 import { ProjectInfoComponent } from './project-info';
+import { projects } from '@api/projects';
 
 @Component({
     selector: 'project-view',
@@ -30,19 +31,13 @@ export class ProjectViewComponent {
         imageUrl: ''
     }
 
-    protected readonly projectsService = inject(ProjectService);
+    protected readonly projects = projects;
     protected readonly router = inject(Router);
     protected selectedProject = signal<Project>(this.initialProject);
 
     constructor() {
         const route = this.router.url.split('/').pop();
-        this.projectsService.getProjects().subscribe((projects) => {
-            projects.find((project) => {
-                if (project.short_name == route) {
-                    this.selectedProject.set(project);
-                }
-            });
-        });
+        this.projects.find((project) => { if (project.short_name == route) { this.selectedProject.set(project); } });
     }
 
 }
